@@ -1,0 +1,163 @@
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+import numpy as np
+from sklearn import metrics
+from scipy import stats
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import svm
+
+class SVM():
+
+    def __init__(self, X, Y, C=1, tol=1e-5, max_iter=3, gamma=1): #Inicializa com X e Y de treinamento
+        self.X = X
+        self.Y = Y
+        self.C = C
+        self.gamma = gamma
+        self.a = np.zeros(len(self.Y))
+        self.b = 0
+        self.tol = tol
+        self.max_iter = max_iter
+
+        iter = 0
+        while iter < self.max_iter:
+            num_changed_alfas = 0
+
+            for i in range(len(self.Y)):
+                Ei = self.decision_func(self.X[i]) - self.Y[i]
+                
+                if (self.Y[i]*Ei < -self.tol and self.a[i] < self.C) or (self.Y[i]*Ei > self.tol and self.a[i] > 0):
+                    j = i
+                    while(j == i):
+                        j = np.random.randint(0, len(self.Y))
+
+                    Ej = self.decision_func(self.X[j]) - self.Y[j]
+                    
+                    ai_old = self.a[i]
+                    aj_old = self.a[j]
+                    
+                    if(self.Y[i] == self.Y[j]):
+                        L = max(0, self.a[j] + self.a[i] - self.C)
+                        H = min(self.C, self.a[i] + self.a[j])
+                    else:
+                        L = max(0, self.a[j] - self.a[i])
+                        H = min(self.C , self.C + self.a[j] - self.a[i])
+                    
+                    if(L == H):
+                        continue
+
+                    eta = 2.0*(np.dot(self.X[i],self.X[j])) - np.dot(self.X[i], self.X[i]) - np.dot(self.X[j], self.X[j])
+
+                    if eta >= 0:
+                        continue
+
+                    self.a[j] = self.a[j] - (self.Y[j]*(Ei - Ej))/eta
+
+                    if self.a[j] > H:
+                        self.a[j] = H
+                    elif self.a[j] < L:
+                        self.a[j] = L
+                    else:
+                        self.a[j] = self.a[j]
+
+                    if abs(self.a[j] - aj_old) < 1e-5:
+                        continue
+                
+                    self.a[i] = self.a[i] + self.Y[i] * self.Y[j] * (aj_old - self.a[j])
+
+                    b1 = self.b - Ei - self.Y[i]*(self.a[i] - ai_old)*np.dot(self.X[i], self.X[i]) - self.Y[j]*(self.a[j] - aj_old)*np.dot(self.X[i], self.X[j])
+            
+                    b2 = self.b - Ej - self.Y[i]*(self.a[i] - ai_old)*np.dot(self.X[i], self.X[j]) - self.Y[j]*(self.a[j] - aj_old)*np.dot(self.X[j], self.X[j])
+                    
+                    if self.a[i] > 0 and self.a[i] < C:
+                        self.b = b1
+                    elif self.a[j] > 0 and self.a[j] < C:
+                        self.b = b2
+                    else:
+                        self.b = (b1 + b2)/2
+
+                    num_changed_alfas += 1
+            
+            if (num_changed_alfas == 0):
+                iter += 1
+            else:
+                iter = 0
+
+    def kernel(self, x, u):
+        return np.exp(-self.gamma*((np.linalg.norm(x-u))**2))
+
+    def decision_func(self, X):
+        sum = 0
+        for i in range(len(self.Y)):
+            sum += self.a[i]*self.Y[i]*self.kernel(self.X[i], X)
+        return sum + self.b
+
+    def predict(self, X):
+        if self.decision_func(X) >= 0:
+            return 1
+        else:
+            return -1
+
+    def get_alpha(self): return self.a
+    def get_b(self): return self.b
+
+iris = datasets.load_iris()
+
+X_iris = iris.data
+
+y_iris = iris.target
+
+#One-vs-one classifier method
+
+X_train, X_test, Y_train, Y_test = train_test_split(X_iris, y_iris, test_size=0.3)
+
+#Pega os valores das classes no dataset em estudo
+y_set = list(set(Y_train))
+
+#Define os duelos entre as classes sem permetir repetição
+setClasses = []
+for i in range(len(y_set)-1):
+    for j in range(i+1,len(y_set)):
+        setClasses.append([y_set[i], y_set[j]])
+
+#Para cada duelo, iremos mapear os valores da classe como -1 e 1
+
+res = []
+for s in setClasses:
+    x_train = X_train.copy().tolist()
+    y_train = list(map(lambda x: -1 if x == s[0] else (1 if x == s[1] else None) , Y_train))
+    for i in range(len(y_train)):
+        if y_train[i] == None:
+            x_train[i] = None
+    y_train = list(filter(lambda x: x != None, y_train))
+    x_train = list(filter(lambda i: i != None, x_train))
+
+    svm = SVM(np.array(x_train), np.array(y_train))
+
+    Y_pred = []
+
+    for i in range(len(X_test)):
+        y_pred = svm.predict(X_test[i])
+        Y_pred.append(y_pred)
+
+    print(f'Classe = {str(s)}:')
+
+    Y_pred = list(map(lambda x: s[0] if x == -1 else (s[1] if x == 1 else None) , Y_pred))
+
+    print(f'\tPrevisão: {Y_pred}')
+
+    res.append(Y_pred)
+
+#Obtendo a previsão para cada duelo, temos que achar a melhor que mais se repete:
+
+res = np.array(res)
+y_pred = stats.mode(res)[0].ravel()
+
+print(f'Previsão: {y_pred}')
+print(f'Teste: {Y_test}')
+y_pred = np.array(y_pred)
+Y_test = np.array(Y_test)
+
+accuracy = metrics.accuracy_score(Y_test, y_pred)
+
+print(f'\tAccuracy: {accuracy}')
