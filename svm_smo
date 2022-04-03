@@ -7,6 +7,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import svm
 
+"""svm.smo.py: Support Vector Machine implementation with smo"""
+
+__author__ = "Gabriel Costa Leite"
+__email__ = "gabriel.wq@alu.ufc.br"
+__maintainer__ = "Gabriel Costa Leite"
+__status__ = "Production"
+
 class SVM():
 
     def __init__(self, X, Y, C=1, tol=1e-5, max_iter=3, gamma=1): #Inicializa com X e Y de treinamento
