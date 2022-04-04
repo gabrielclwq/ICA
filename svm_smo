@@ -5,7 +5,6 @@ from sklearn import metrics
 from scipy import stats
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn import svm
 from sklearn.svm import SVC
 
 """svm.smo.py: Support Vector Machine implementation with smo"""
