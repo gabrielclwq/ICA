@@ -14,7 +14,7 @@ __email__ = "gabriel.wq@alu.ufc.br"
 __maintainer__ = "Gabriel Costa Leite"
 __status__ = "Production"
 
-data = pd.read_csv("yeast.data", sep=" ")
+data = pd.read_csv("car.data")
 
 predict = 'class'
 
@@ -47,7 +47,6 @@ for i in X.columns:
 for i in X.columns:
     X[i] = X[i]/min(X[i]) """
 
-
 #Treino
 
 X_train, X_test, Y_train, Y_test = train_test_split(X.values, Y, test_size=0.3)
@@ -68,6 +67,31 @@ print(f'\tAccuracy: {accuracy}')
 plt.figure()
 plt.scatter(range(len(Y_test)), Y_test, label="Y_test", color="k")
 plt.scatter(range(len(Y_test)), y_pred, label="Y_pred", marker='x', color="r")
+plt.legend()
+plt.grid()
+plt.show()
+
+#Treino sklearn
+
+X_train, X_test, Y_train, Y_test = train_test_split(X.values, Y, test_size=0.3)
+
+clf = SVC(C=1, gamma=1)
+clf.fit(X_train, Y_train)
+Y_pred = clf.predict(X_test)
+accuracy = metrics.accuracy_score(Y_test, Y_pred)
+
+print(f'Previsão:\n{Y_pred}')
+print(f'Teste:\n{Y_test}')
+
+#print(f'Tempo de treino: {tempoTreino} | Tempo de teste: {tempoTeste} | Tempo total: {tempoTotal}')
+
+accuracy = metrics.accuracy_score(Y_test, Y_pred)
+
+print(f'\tAccuracy: {accuracy}')
+
+plt.figure()
+plt.scatter(range(len(Y_test)), Y_test, label="Y_test", color="k")
+plt.scatter(range(len(Y_test)), Y_pred, label="Y_pred", marker='x', color="r")
 plt.legend()
 plt.grid()
 plt.show()

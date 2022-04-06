@@ -33,7 +33,7 @@ class svm_smo():
             num_changed_alfas = 0
 
             for i in range(len(self.Y)):
-                Ei = self.decision_func(self.X[i]) - self.Y[i]
+                Ei = self.decision_func(self.X[i]) - self.Y[i])
                 
                 if (self.Y[i]*Ei < -self.tol and self.a[i] < self.C) or (self.Y[i]*Ei > self.tol and self.a[i] > 0):
                     j = i
@@ -55,7 +55,7 @@ class svm_smo():
                     if(L == H):
                         continue
 
-                    eta = 2.0*(np.dot(self.X[i],self.X[j])) - np.dot(self.X[i], self.X[i]) - np.dot(self.X[j], self.X[j])
+                    eta = 2.0*(self.kernel(self.X[i],self.X[j])) - self.kernel(self.X[i], self.X[i]) - self.kernel(self.X[j], self.X[j])
 
                     if eta >= 0:
                         continue
@@ -69,14 +69,14 @@ class svm_smo():
                     else:
                         self.a[j] = self.a[j]
 
-                    if abs(self.a[j] - aj_old) < 1e-5:
+                    if abs(self.a[j] - aj_old) < self.tol:
                         continue
                 
                     self.a[i] = self.a[i] + self.Y[i] * self.Y[j] * (aj_old - self.a[j])
 
-                    b1 = self.b - Ei - self.Y[i]*(self.a[i] - ai_old)*np.dot(self.X[i], self.X[i]) - self.Y[j]*(self.a[j] - aj_old)*np.dot(self.X[i], self.X[j])
+                    b1 = self.b - Ei - self.Y[i]*(self.a[i] - ai_old)*self.kernel(self.X[i], self.X[i]) - self.Y[j]*(self.a[j] - aj_old)*self.kernel(self.X[i], self.X[j])
             
-                    b2 = self.b - Ej - self.Y[i]*(self.a[i] - ai_old)*np.dot(self.X[i], self.X[j]) - self.Y[j]*(self.a[j] - aj_old)*np.dot(self.X[j], self.X[j])
+                    b2 = self.b - Ej - self.Y[i]*(self.a[i] - ai_old)*self.kernel(self.X[i], self.X[j]) - self.Y[j]*(self.a[j] - aj_old)*self.kernel(self.X[j], self.X[j])
                     
                     if self.a[i] > 0 and self.a[i] < self.C:
                         self.b = b1
@@ -136,7 +136,9 @@ def modelo(X_train, Y_train, X_test, returnTime=0):
         y_train = list(filter(lambda x: x != None, y_train))
         x_train = list(filter(lambda i: i != None, x_train))
 
-        svm = svm_smo(np.array(x_train), np.array(y_train), tol=1e-3, max_iter=2)
+        t = time.time()
+        svm = svm_smo(np.array(x_train), np.array(y_train), tol=1e-3, max_iter=1)
+        print(time.time() - t)
         tempoTreino += time.time() - t2
 
         t3 = time.time()
