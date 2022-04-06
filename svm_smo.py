@@ -136,7 +136,7 @@ def modelo(X_train, Y_train, X_test, returnTime=0):
         y_train = list(filter(lambda x: x != None, y_train))
         x_train = list(filter(lambda i: i != None, x_train))
 
-        svm = svm_smo(np.array(x_train), np.array(y_train))
+        svm = svm_smo(np.array(x_train), np.array(y_train), tol=1e-3, max_iter=2)
         tempoTreino += time.time() - t2
 
         t3 = time.time()

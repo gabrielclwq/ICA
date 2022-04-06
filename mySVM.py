@@ -14,7 +14,7 @@ __email__ = "gabriel.wq@alu.ufc.br"
 __maintainer__ = "Gabriel Costa Leite"
 __status__ = "Production"
 
-data = pd.read_csv("car.data")
+data = pd.read_csv("yeast.data", sep=" ")
 
 predict = 'class'
 
@@ -47,6 +47,7 @@ for i in X.columns:
 for i in X.columns:
     X[i] = X[i]/min(X[i]) """
 
+
 #Treino
 
 X_train, X_test, Y_train, Y_test = train_test_split(X.values, Y, test_size=0.3)
@@ -60,9 +61,9 @@ Y_test = np.array(Y_test)
 
 print(f'Tempo de treino: {tempoTreino} | Tempo de teste: {tempoTeste} | Tempo total: {tempoTotal}')
 
-""" accuracy = metrics.accuracy_score(Y_test, y_pred)
+accuracy = metrics.accuracy_score(Y_test, y_pred)
 
-print(f'\tAccuracy: {accuracy}') """
+print(f'\tAccuracy: {accuracy}')
 
 plt.figure()
 plt.scatter(range(len(Y_test)), Y_test, label="Y_test", color="k")
