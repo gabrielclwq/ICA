@@ -147,7 +147,7 @@ for i in range(len(matrizConf[0])):
     recall.append((matrizConf[i,i])/(matrizConf[i].sum()))
 print(f'recall = {recall}')
 
-#Precision:
+#Precision or sensitive:
 precision = []
 for i in range(len(matrizConf[0])):
     precision.append((matrizConf[i,i])/(matrizConf[:,i].sum()))
@@ -161,8 +161,26 @@ for i in range(len(matrizConf[0])):
     fscore.append(2*r*p/(r+p))
 print(f'fscore = {fscore}')
 
-matrizSuporte = np.array([precision, recall, fscore])
-dfMatrizSuporte = pd.DataFrame(matrizSuporte.T, columns=["precision", "recall", "fscore"])
+#Specificity:
+spec = []
+for i in range(len(matrizConf[0])):
+    spec.append((matrizConf.sum() - matrizConf[i].sum() - matrizConf[:,1].sum() + matrizConf[i,i])/(matrizConf.sum() - matrizConf[:,1].sum()))
+print(f'specificity = {spec}')
+
+#True positive:
+truePositive = []
+for i in range(len(matrizConf[0])):
+    truePositive.append(matrizConf[i,i])
+print(f'specificity = {truePositive}')
+
+#True negative:
+trueNegative = []
+for i in range(len(matrizConf[0])):
+    trueNegative.append(matrizConf.sum() - matrizConf[i].sum() - matrizConf[:,1].sum() + matrizConf[i,i])
+print(f'specificity = {trueNegative}')
+
+matrizSuporte = np.array([precision, recall, fscore, spec, truePositive, trueNegative])
+dfMatrizSuporte = pd.DataFrame(matrizSuporte.T, columns=["precision/sensiteve", "recall", "fscore", "specificity", "truePositive", "trueNegative"])
 dfMatrizSuporte.index = name
 print(dfMatrizSuporte)
 
