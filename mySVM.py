@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 #from svm_smo import modelo
 import pandas as pd
 import time
+modelos = []
 
 """svm.smo.py: Support Vector Machine implementation with smo"""
 
@@ -45,6 +46,8 @@ Y_set.append(y_set)
 for i in X.columns:
     X[i] = X[i]/max(X[i])
 
+name = Y_set[0]
+
 """ #Desnormalizar X:
 for i in X.columns:
     X[i] = X[i]/min(X[i]) """
@@ -81,108 +84,182 @@ X_tt, X_val, Y_tt, Y_val = train_test_split(X.values, Y, test_size=0.3)
 #Define o intervalo de C e gamma para ser testado
 C = range(1,10)
 gamma = range(1,10)
-modelos = []
+test_size = np.arange(0.1, 0.9, 0.01)
+teste = []
 
 #Divide o conjunto de treino em um treino e teste
-X_train, X_test, Y_train, Y_test = train_test_split(X_tt, Y_tt, test_size=0.3)
+for ts in test_size:
+    modelos = []
 
-tempoTreino = time.time()
-for c in C:
-    for g in gamma:
-        tempoModelo = time.time()
-        clf = SVC(C=c, gamma=g)
-        clf.fit(X_train, Y_train)
-        y_pred = clf.predict(X_test)
-        acertos = 0
-        for i in range(len(y_pred)):
-            if y_pred[i] == Y_test[i]:
-                acertos += 1
-            else:
-                pass
-        acc = acertos/(len(y_pred))
-        tempoModelo = time.time() - tempoModelo
-        modelos.append([acc, clf, c, g, acertos, tempoModelo])
-tempoTreino = time.time() - tempoTreino
+    X_train, X_test, Y_train, Y_test = train_test_split(X_tt, Y_tt, test_size=ts)
 
-# Agora, obtidos os modelos, iremos ordenar de forma crescente tendo em vista a accuracy:
-for i in range(len(modelos)):
-    for j in range(i + 1, len(modelos)):
-        if modelos[i][0] > modelos[j][0]:
-            modelos[i], modelos[j] = modelos[j], modelos[i]
+    tempoTreino = time.time()
+    for c in C:
+        for g in gamma:
+            tempoModelo = time.time()
+            clf = SVC(C=c, gamma=g)
+            clf.fit(X_train, Y_train)
+            y_pred = clf.predict(X_test)
+            acertos = 0
+            for i in range(len(y_pred)):
+                if y_pred[i] == Y_test[i]:
+                    acertos += 1
+                else:
+                    pass
+            acc = acertos/(len(y_pred))
+            tempoModelo = time.time() - tempoModelo
+            modelos.append([acc, clf, c, g, acertos, tempoModelo, [X_train, X_test, Y_train, Y_test]])
+    tempoTreino = time.time() - tempoTreino
 
-#O melhor modelo será utilizado para a validação:
-modelo = modelos[-1]
-print(modelo)
-clf = modelo[1]
-y_val = clf.predict(X_val)
+    # Agora, obtidos os modelos, iremos ordenar de forma crescente tendo em vista a accuracy:
+    for i in range(len(modelos)):
+        for j in range(i + 1, len(modelos)):
+            if modelos[i][0] > modelos[j][0]:
+                modelos[i], modelos[j] = modelos[j], modelos[i]
 
-#Obtendo a matriz de confusão:
-y_set = list(set(Y_val))
-matrizConf = np.zeros((len(y_set), len(y_set)))
-for i in range(len(y_set)): #i -> real
-    for j in range(len(y_set)): #j -> previsao
-        nReal = 0 #total
-        nPrev = 0 #acertos
-        for k in range(len(Y_val)):
-            if Y_val[k] == y_set[i]:
-                nReal += 1
-                if y_val[k] == y_set[j]:
-                    nPrev += 1
-        matrizConf[i,j] = nPrev
+    #O melhor modelo será utilizado para a validação:
+    modelo = modelos[-1]
+    clf = modelo[1]
+    y_val = clf.predict(X_val)
 
-#Renomeando a saida:
-name = Y_set[0]
+    #Obtendo a matriz de confusão:
+    y_set = list(set(Y_val))
+    matrizConf = np.zeros((len(y_set), len(y_set)))
+    for i in range(len(y_set)): #i -> real
+        for j in range(len(y_set)): #j -> previsao
+            nReal = 0 #total
+            nPrev = 0 #acertos
+            for k in range(len(Y_val)):
+                if Y_val[k] == y_set[i]:
+                    nReal += 1
+                    if y_val[k] == y_set[j]:
+                        nPrev += 1
+            matrizConf[i,j] = nPrev
 
-dfMatrizConf = pd.DataFrame(matrizConf, columns=name)
-dfMatrizConf.index = name
-print(dfMatrizConf)
+    #Renomeando a saida:
 
-#Accuracy:
-acc = (matrizConf.diagonal().sum())/(matrizConf.sum())
-print(f'acc = {acc}')
+    dfMatrizConf = pd.DataFrame(matrizConf, columns=name)
+    dfMatrizConf.index = name
+    #print(dfMatrizConf)
 
-#Recall:
-recall = []
-for i in range(len(matrizConf[0])):
-    recall.append((matrizConf[i,i])/(matrizConf[i].sum()))
-print(f'recall = {recall}')
+    #Accuracy:
+    acc = (matrizConf.diagonal().sum())/(matrizConf.sum())
+    #print(f'acc = {acc}')
 
-#Precision or sensitive:
-precision = []
-for i in range(len(matrizConf[0])):
-    precision.append((matrizConf[i,i])/(matrizConf[:,i].sum()))
-print(f'precision = {precision}')
+    #Recall or sensitive:
+    recall = []
+    for i in range(len(matrizConf[0])):
+        recall.append((matrizConf[i,i])/(matrizConf[i].sum()))
+    #print(f'recall = {recall}')
 
-#fscore:
-fscore = []
-for i in range(len(matrizConf[0])):
-    r = (matrizConf[i,i])/(matrizConf[i].sum())
-    p = (matrizConf[i,i])/(matrizConf[i].sum())
-    fscore.append(2*r*p/(r+p))
-print(f'fscore = {fscore}')
+    #Precision:
+    precision = []
+    for i in range(len(matrizConf[0])):
+        precision.append((matrizConf[i,i])/(matrizConf[:,i].sum()))
+    #print(f'precision = {precision}')
 
-#Specificity:
-spec = []
-for i in range(len(matrizConf[0])):
-    spec.append((matrizConf.sum() - matrizConf[i].sum() - matrizConf[:,1].sum() + matrizConf[i,i])/(matrizConf.sum() - matrizConf[:,1].sum()))
-print(f'specificity = {spec}')
+    #fscore:
+    fscore = []
+    for i in range(len(matrizConf[0])):
+        r = (matrizConf[i,i])/(matrizConf[i].sum())
+        p = (matrizConf[i,i])/(matrizConf[i].sum())
+        fscore.append(2*r*p/(r+p))
+    #print(f'fscore = {fscore}')
 
-#True positive:
-truePositive = []
-for i in range(len(matrizConf[0])):
-    truePositive.append(matrizConf[i,i])
-print(f'specificity = {truePositive}')
+    #Specificity:
+    spec = []
+    for i in range(len(matrizConf[0])):
+        spec.append((matrizConf.sum() - matrizConf[i].sum() - matrizConf[:,i].sum() + matrizConf[i,i])/(matrizConf.sum() - matrizConf[:,i].sum()))
+    #print(f'specificity = {spec}')
 
-#True negative:
-trueNegative = []
-for i in range(len(matrizConf[0])):
-    trueNegative.append(matrizConf.sum() - matrizConf[i].sum() - matrizConf[:,1].sum() + matrizConf[i,i])
-print(f'specificity = {trueNegative}')
+    #True positive:
+    truePositive = []
+    for i in range(len(matrizConf[0])):
+        truePositive.append(matrizConf[i,i])
+    #print(f'truePositive = {truePositive}')
 
-matrizSuporte = np.array([precision, recall, fscore, spec, truePositive, trueNegative])
-dfMatrizSuporte = pd.DataFrame(matrizSuporte.T, columns=["precision/sensiteve", "recall", "fscore", "specificity", "truePositive", "trueNegative"])
-dfMatrizSuporte.index = name
-print(dfMatrizSuporte)
+    #True negative:
+    trueNegative = []
+    for i in range(len(matrizConf[0])):
+        trueNegative.append(matrizConf.sum() - matrizConf[i].sum() - matrizConf[:,i].sum() + matrizConf[i,i])
+    #print(f'trueNegative = {trueNegative}')
+
+    matrizSuporte = np.array([precision, recall, fscore, spec, truePositive, trueNegative])
+    dfMatrizSuporte = pd.DataFrame(matrizSuporte.T, columns=["precision", "recall", "fscore", "specificity", "truePositive", "trueNegative"])
+    dfMatrizSuporte.index = name
+    #print(dfMatrizSuporte)
+
+    teste.append([modelo, ts, tempoTreino, y_val, dfMatrizConf, dfMatrizSuporte])
+
+#print:
+sensitive = []
+specificity = []
+for i in teste:
+    modelo = i[0]
+    dfMatrizConf = i[-2]
+    dfMatrizSuporte = i[-1]
+    print(f'Modelo: {modelo[1]} | Tempo de treinamento: {i[2]}')
+    print(f'Matriz de confusão | Size of Train/Test: {len(X_tt)} -> Train % = {1-i[1]} - Test % = {i[1]} | Size of Validation: {len(X_val)}:')
+    print(dfMatrizConf)
+    print(f'Estatísticas | Size of Train/Test: {len(X_tt)} -> Train % = {1-i[1]} - Test % = {i[1]} | Size of Validation: {len(X_val)}:')
+    print(dfMatrizSuporte)
+    print("\n")
+
+    sensitive.append(dfMatrizSuporte['recall'].tolist())
+    specificity.append(dfMatrizSuporte['specificity'].tolist())
+
+
+
+#data_plot:
+fig, axs = plt.subplots(2)
+fig.suptitle('Data Classifiers')
+
+def organizador(my_list1, my_list2):
+    for i in range(len(my_list1)):
+        for j in range(i + 1, len(my_list1)):
+            if my_list1[i] > my_list1[j]:
+                my_list1[i], my_list1[j] = my_list1[j], my_list1[i]
+                my_list2[i], my_list2[j] = my_list2[j], my_list2[i]
+    return(my_list1, my_list2)
+
+Y_, X_ = organizador(Y, X.values)
+lens = [0]
+setY_ = list(set(Y_))
+soma = 0
+for i in range(len(setY_)):
+    for j in range(len(Y_)):
+        if Y_[j] == setY_[i]:
+            soma += 1
+    lens.append(soma)
+
+for i in range(len(setY_)):
+    axs[0].scatter(X_[lens[i]:lens[i+1]-1, 0], X_.sum(axis=1)[lens[i]:lens[i+1]-1])
+    axs[1].scatter(X_[lens[i]:lens[i+1]-1, 0], X_.sum(axis=1)[lens[i]:lens[i+1]-1]+i*10)
+axs[0].legend(name)
+axs[0].set_title("Real")
+axs[1].set_title("Distribuido")
+for ax in axs.flat:
+    ax.set(xlabel='soma de atribudos', ylabel='buying')
+for ax in axs.flat:
+    ax.label_outer()
+
+#plot roc:
+sensitive = np.array(sensitive)
+specificity = np.array(specificity)
+
+plt.figure()
+for i in range(len(name)):
+    specificity[:,i] = (specificity[:,i]-min(specificity[:,i]))/(max(specificity[:,i])-min(specificity[:,i]))
+    sensitive[:,i] = (sensitive[:,i]-min(sensitive[:,i]))/(max(sensitive[:,i])-min(sensitive[:,i]))
+    plt.plot(specificity[:,i], sensitive[:,i])
+plt.legend(name)
+
+plt.show()
+
+
+
+
+
 
 """ print(confusion_matrix(Y_val, y_val))
 print(classification_report(Y_val, y_val))
