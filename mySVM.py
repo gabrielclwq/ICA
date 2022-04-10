@@ -18,6 +18,7 @@ __maintainer__ = "Gabriel Costa Leite"
 __status__ = "Production"
 
 data = pd.read_csv("car.data")
+print(data.head())
 
 predict = 'class'
 
@@ -84,7 +85,7 @@ X_tt, X_val, Y_tt, Y_val = train_test_split(X.values, Y, test_size=0.3)
 #Define o intervalo de C e gamma para ser testado
 C = range(1,10)
 gamma = range(1,10)
-test_size = np.arange(0.1, 0.9, 0.01)
+test_size = [0.3]
 teste = []
 
 #Divide o conjunto de treino em um treino e teste
@@ -120,7 +121,9 @@ for ts in test_size:
     #O melhor modelo será utilizado para a validação:
     modelo = modelos[-1]
     clf = modelo[1]
+    tempoPredicao = time.time()
     y_val = clf.predict(X_val)
+    tempoPredicao = time.time() - tempoPredicao
 
     #Obtendo a matriz de confusão:
     y_set = list(set(Y_val))
@@ -169,7 +172,7 @@ for ts in test_size:
     #Specificity:
     spec = []
     for i in range(len(matrizConf[0])):
-        spec.append((matrizConf.sum() - matrizConf[i].sum() - matrizConf[:,i].sum() + matrizConf[i,i])/(matrizConf.sum() - matrizConf[:,i].sum()))
+        spec.append((matrizConf[:,i].sum() - matrizConf[i,i])/(matrizConf.sum() - matrizConf[i].sum()))
     #print(f'specificity = {spec}')
 
     #True positive:
@@ -189,7 +192,7 @@ for ts in test_size:
     dfMatrizSuporte.index = name
     #print(dfMatrizSuporte)
 
-    teste.append([modelo, ts, tempoTreino, y_val, dfMatrizConf, dfMatrizSuporte])
+    teste.append([modelo, ts, tempoTreino, tempoPredicao, y_val, dfMatrizConf, dfMatrizSuporte])
 
 #print:
 sensitive = []
@@ -207,8 +210,6 @@ for i in teste:
 
     sensitive.append(dfMatrizSuporte['recall'].tolist())
     specificity.append(dfMatrizSuporte['specificity'].tolist())
-
-
 
 #data_plot:
 fig, axs = plt.subplots(2)

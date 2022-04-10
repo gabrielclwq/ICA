@@ -1,3 +1,4 @@
+from os import P_NOWAIT
 from sklearn import datasets, metrics
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.model_selection import train_test_split
@@ -8,142 +9,87 @@ import matplotlib.pyplot as plt
 #from svm_smo import modelo
 import pandas as pd
 import time
+from SVMAnalytics import SVMAnalytics
 
-"""svm.smo.py: Support Vector Machine implementation with smo"""
-
-__author__ = "Gabriel Costa Leite"
-__email__ = "gabriel.wq@alu.ufc.br"
-__maintainer__ = "Gabriel Costa Leite"
-__status__ = "Production"
 
 data = pd.read_csv("car.data")
+print(data.head())
 
 predict = 'class'
 
 Y = data[predict]
 X = data.drop(predict, 1)
 
-#Transformando string em int:
-X_set = []
-for i in X.columns:
-    x_set = list(set(X[i]))
-    a = 1
-    for j in x_set:
-        X[i] = list(map(lambda x: a if x == j else x , X[i]))
-        a += 1
-    X_set.append(x_set)
+testsize = np.arange(0.1, 1, 0.1)
+C = np.arange(1, 10, 1)
+gamma = np.arange(1, 10, 1)
 
-Y_set = []
-y_set = list(set(Y))
-a = 1
-for j in y_set:
-    Y = list(map(lambda x: a if x == j else x , Y))
-    a += 1
-Y_set.append(y_set)
+models = []
+matrizesConf = []
+matrizesSup = []
+sensitive = []
+specificity = []
 
-#Normalizando X:
-for i in X.columns:
-    X[i] = X[i]/max(X[i])
+#Find the best C and the best gamma:
+for c in C:
+    for g in gamma:
+        model = SVMAnalytics(X, Y, C=c, gamma=g)
+        models.append(model)
 
-name = Y_set[0]
+#Organiza do pior modelo para o melhor:
+for i in range(len(models)):
+    for j in range(i + 1, len(models)):
+        if models[i].getAccuracy() > models[j].getAccuracy():
+            models[i], models[j] = models[j], models[i]
 
-#Treino sklearn
+#The best model is:
+model = models[-1]
+print(model.getAccuracy())
 
-#Divide o dataset em treino/treino e validacao
-X_tt, X_val, Y_tt, Y_val = train_test_split(X.values, Y, test_size=0.3)
+matrizConf = model.getMatrizConfusao()
+matrizSup = model.getMatrizSuporte()
+matrizSup.to_csv("df")
+print(matrizConf)
+print(matrizSup)
 
-#Define o intervalo de C e gamma para ser testado
-C = [5]
-gamma = [5]
-test_size = np.arange(0.1, 1, 0.1)
-modelos = []
-teste = []
+fig1 = model.getAllDataClassifiersGraph()
+fig2 = model.getPredDataClassifiersGraph()
 
-#Divide o conjunto de treino em um treino e teste
-for ts in test_size:
-    X_train, X_test, Y_train, Y_test = train_test_split(X_tt, Y_tt, test_size=ts)
+""" for i in testsize:
+    model = SVMAnalytics(X, Y, C=5, gamma=5, test_size=i)
+    matrizConf = model.getMatrizConfusao()
+    matrizSup = model.getMatrizSuporte()
+    print(matrizConf)
+    print(matrizSup['Accuracy'])
+    matrizesConf.append(matrizConf)
+    matrizesSup.append(matrizSup)
+    models.append(model)
 
-    clf = SVC(C=5, gamma=5)
-    clf.fit(X_train, Y_train)
-    y_pred = clf.predict(X_test)
-    acertos = 0
-    for i in range(len(y_pred)):
-        if y_pred[i] == Y_test[i]:
-            acertos += 1
-        else:
-            pass
-    acc = acertos/(len(y_pred))
+    sensitive.append(matrizSup['TPR'].tolist())
+    specificity.append(matrizSup['FPR'].tolist())
 
-    y_val = clf.predict(X_val)
+Xnames, Ynames = model.getNames()
 
-    #Obtendo a matriz de confusão:
-    y_set = list(set(Y_val))
-    matrizConf = np.zeros((len(y_set), len(y_set)))
-    for i in range(len(y_set)): #i -> real
-        for j in range(len(y_set)): #j -> previsao
-            nReal = 0 #total
-            nPrev = 0 #acertos
-            for k in range(len(Y_val)):
-                if Y_val[k] == y_set[i]:
-                    nReal += 1
-                    if y_val[k] == y_set[j]:
-                        nPrev += 1
-            matrizConf[i,j] = nPrev
+#plot roc:
+def organizador(my_list1, my_list2):
+    for i in range(len(my_list1)):
+        for j in range(i + 1, len(my_list1)):
+            if my_list1[i] > my_list1[j]:
+                my_list1[i], my_list1[j] = my_list1[j], my_list1[i]
+                my_list2[i], my_list2[j] = my_list2[j], my_list2[i]
+    return(my_list1, my_list2)
+specificity, sensitive = organizador(specificity, sensitive)
 
-    #Renomeando a saida:
+sensitive = np.array(sensitive)
+specificity = np.array(specificity)
 
-    dfMatrizConf = pd.DataFrame(matrizConf, columns=name)
-    dfMatrizConf.index = name
-    #print(dfMatrizConf)
+plt.figure()
+for i in range(len(Ynames)):
+    specificity[:,i] = (specificity[:,i]-min(specificity[:,i]))/(max(specificity[:,i])-min(specificity[:,i]))
+    sensitive[:,i] = (sensitive[:,i]-min(sensitive[:,i]))/(max(sensitive[:,i])-min(sensitive[:,i]))
+    plt.plot(specificity[:,i], sensitive[:,i])
+plt.legend(Ynames) """
 
-    #Accuracy:
-    acc = (matrizConf.diagonal().sum())/(matrizConf.sum())
-    #print(f'acc = {acc}')
+plt.show()
 
-    #Recall or sensitive:
-    recall = []
-    for i in range(len(matrizConf[0])):
-        recall.append((matrizConf[i,i])/(matrizConf[i].sum()))
-    #print(f'recall = {recall}')
-
-    #Precision:
-    precision = []
-    for i in range(len(matrizConf[0])):
-        precision.append((matrizConf[i,i])/(matrizConf[:,i].sum()))
-    #print(f'precision = {precision}')
-
-    #fscore:
-    fscore = []
-    for i in range(len(matrizConf[0])):
-        r = (matrizConf[i,i])/(matrizConf[i].sum())
-        p = (matrizConf[i,i])/(matrizConf[i].sum())
-        fscore.append(2*r*p/(r+p))
-    #print(f'fscore = {fscore}')
-
-    #Specificity:
-    spec = []
-    for i in range(len(matrizConf[0])):
-        spec.append((matrizConf.sum() - matrizConf[i].sum() - matrizConf[:,i].sum() + matrizConf[i,i])/(matrizConf.sum() - matrizConf[:,i].sum()))
-    #print(f'specificity = {spec}')
-
-    #True positive:
-    truePositive = []
-    for i in range(len(matrizConf[0])):
-        truePositive.append(matrizConf[i,i])
-    #print(f'truePositive = {truePositive}')
-
-    #True negative:
-    trueNegative = []
-    for i in range(len(matrizConf[0])):
-        trueNegative.append(matrizConf.sum() - matrizConf[i].sum() - matrizConf[:,i].sum() + matrizConf[i,i])
-    #print(f'trueNegative = {trueNegative}')
-
-    matrizSuporte = np.array([precision, recall, fscore, spec, truePositive, trueNegative])
-    dfMatrizSuporte = pd.DataFrame(matrizSuporte.T, columns=["precision", "recall", "fscore", "specificity", "truePositive", "trueNegative"])
-    dfMatrizSuporte.index = name
-    #print(dfMatrizSuporte)
-
-    print(f'dfMatrizConf:\n {dfMatrizConf}')
-    print(confusion_matrix(Y_val, y_val))
-    print(f'dfMatrizSuporte:\n {dfMatrizSuporte}')
 
