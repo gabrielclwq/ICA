@@ -1,6 +1,6 @@
 from os import P_NOWAIT
 from sklearn import datasets, metrics
-from sklearn.metrics import confusion_matrix, classification_report
+from sklearn.metrics import confusion_matrix, classification_report, roc_curve, auc, roc_auc_score
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 import numpy as np
@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 #from svm_smo import modelo
 import pandas as pd
 import time
+from sklearn.preprocessing import label_binarize
+from itertools import cycle
 
 """svm.smo.py: Support Vector Machine implementation with smo"""
 
@@ -39,10 +41,13 @@ class SVMAnalytics():
 
         self.preprocessing()
 
+        self.tempoTreino = time.time()
         self.X_train, self.X_test, self.Y_train, self.Y_test = train_test_split(self.X, self.Y, test_size=self.test_size)
         self.clf = SVC(C=self.C, gamma=self.gamma)
         self.clf.fit(self.X_train, self.Y_train)
         self.pred = self.clf.predict(self.X_test)
+        self.score = self.clf.decision_function(self.X_test)
+        self.tempoTreino = time.time() - self.tempoTreino
 
         self.matrizConfusao()
         self.matrizSuporte()
@@ -75,7 +80,7 @@ class SVMAnalytics():
 
     def matrizConfusao(self):
         #Obtendo a matriz de confusão:
-        y_set = list(set(self.Y_test))
+        y_set = list(set(self.Y))
         self.matrizConf = np.zeros((len(y_set), len(y_set)))
         for i in range(len(y_set)): #i -> real
             for j in range(len(y_set)): #j -> previsao
@@ -104,7 +109,6 @@ class SVMAnalytics():
         self.supportName.append("PN")
         PN = np.array(PN)
         self.matrizSup.append(PN)
-
 
         #Actual Positive:
         AP = []
@@ -190,7 +194,7 @@ class SVMAnalytics():
         self.matrizSup.append(TPR)
 
         #False positive rate (FPR):
-        FPR = FP/AN
+        FPR = FP/(TN + FP)
         self.supportName.append("FPR")
         self.matrizSup.append(FPR)
 
@@ -279,6 +283,15 @@ class SVMAnalytics():
 
     def getConstants(self):
         return self.C, self.gamma
+
+    def getTestsize(self):
+        return self.test_size
+
+    def getTempotreino(self):
+        return self.tempoTreino
+
+    def getScore(self):
+        return self.score
 
     def getMatrizConfusao(self):
         dfMatrizConf = pd.DataFrame(self.matrizConf, columns=self.Ynames)
