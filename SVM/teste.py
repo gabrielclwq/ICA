@@ -12,6 +12,7 @@ import time
 from SVMAnalytics import SVMAnalytics
 from sklearn.preprocessing import label_binarize
 from itertools import cycle
+np.seterr(all="ignore")
 
 data = pd.read_csv("car.data")
 print(data.head())
@@ -78,9 +79,9 @@ for i in testsize:
     sensitive.append(dfS['TPR'].tolist())
     specificity.append(dfS['FPR'].tolist())
 
-    print(f'Modelo testsize = {1-i}')
+    """ print(f'Modelo testsize = {1-i}')
     print(f'Matriz de confusão:\n{dfC}')
-    print(f'Matriz de suporte:\n{dfS[["Accuracy", "TPR", "FPR", "F1 score"]]}')
+    print(f'Matriz de suporte:\n{dfS[["Accuracy", "TPR", "FPR", "F1 score"]]}') """
 
 sensitive = np.array(sensitive)
 specificity = np.array(specificity)
@@ -105,6 +106,8 @@ vmodel = vmodels[-1]
 dfC = vmodel.getMatrizConfusao()
 dfS = vmodel.getMatrizSuporte()
 print(f'Modelo testsize = {vmodel.getTestsize()}')
+print(f'Constantes: C = {C}, gamma = {gamma}')
+print(f'Tempo de treino: {vmodel.getTempotreino()}')
 print(f'Matriz de confusão:\n{dfC}')
 print(f'Matriz de suporte:\n{dfS[["Accuracy", "TPR", "FPR", "F1 score"]]}')
 test_size = vmodel.getTestsize()
@@ -145,8 +148,8 @@ for d in dfs:
     dsensitive.append(ddfS['TPR'].tolist())
     dspecificity.append(ddfS['FPR'].tolist())
 
-    print(f'Matriz de confusão:\n{ddfC}')
-    print(f'Matriz de suporte:\n{ddfS[["Accuracy", "TPR", "FPR", "F1 score"]]}')
+    """ print(f'Matriz de confusão:\n{ddfC}')
+    print(f'Matriz de suporte:\n{ddfS[["Accuracy", "TPR", "FPR", "F1 score"]]}') """
 
 dsensitive = np.array(dsensitive)
 dspecificity = np.array(dspecificity)
