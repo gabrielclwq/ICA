@@ -46,6 +46,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2)
 
 kn = 3
 pred = []
+p = []
 for i in X_test:
     distances = []
     index = []
@@ -60,7 +61,8 @@ for i in X_test:
     y_train = np.array(Y_train[index])
     print(y_train)
     m = ((distances*y_train).sum())/(distances.sum())
-    print(m)
+    p.append(m)
     pred.append(round(m))
 
+print(p)
 print(f'Teste: {Y_test}\nPred:  {np.array(pred)}')
