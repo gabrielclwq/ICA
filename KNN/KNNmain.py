@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn import datasets
+import time
 np.seterr(all="ignore")
 
 def dEuclidian(p, q):
@@ -350,7 +351,9 @@ while 1:
 
             X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=t)
 
+            tempoTT = time.time()
             pred, p = knn(X_train, Y_train, X_test, kn=k)
+            tempoTT = time.time() - tempoTT
 
             # Matriz Confusão:
 
@@ -364,8 +367,8 @@ while 1:
             dfMatrizSup = pd.DataFrame(matrizSup.T, columns=supportNames)
             dfMatrizSup.index = classes
 
-        acc.append(dfMatrizSup["Accuracy"].values.sum())
-        models.append([t, k, dfMatrizConf, dfMatrizSup])
+            acc.append(dfMatrizSup["Accuracy"].values.sum())
+            models.append([t, k, tempoTT, dfMatrizConf, dfMatrizSup])
 
     for i in range(len(models)):
         for j in range(i + 1, len(models)):
@@ -376,8 +379,9 @@ while 1:
     model = models[-1]
     t = model[0]
     k = model[1]
-    dfMatrizConf = model[2]
-    dfMatrizSup = model[3]
+    tempoTT = model[2]
+    dfMatrizConf = model[3]
+    dfMatrizSup = model[4]
 
     print("---------------------------------")
     print(f'Melhor Testsize: {t}')
@@ -385,6 +389,10 @@ while 1:
 
     print("---------------------------------")
     print(f'Melhor KN: {k}')
+    print("---------------------------------")
+
+    print("---------------------------------")
+    print(f'Tempo de treinamento: {tempoTT}')
     print("---------------------------------")
     
     print("---------------------------------")
