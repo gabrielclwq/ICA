@@ -284,16 +284,7 @@ def ROC(Y_test, p, label):
     A += areaTrap(N, FP_prev, P, TP_prev)
     A = A/(P*N)
 
-    fig = plt.figure()
-    plt.plot([0, 1], [0, 1], linestyle='dashed', color="k")
-    plt.plot(fpr, tpr, label=f'ROC Curve (area = {A})', color="tab:orange")
-    plt.legend()
-    plt.grid()
-    plt.ylabel("True Positeve Rate")
-    plt.xlabel("False Positive Rate")
-    plt.title(f'Receiver Operating Characteristic for Class {label}')
-
-    return fig
+    return fpr, tpr, A
 
 # Importação do dataset
 
@@ -309,9 +300,7 @@ X = data.drop(columns=[predict])
 
 Y = Y.transform(lambda x: 1 if x <= 5 else (2 if x>5 and x<=14 else (3 if x>14 and x<16 else(4 if x>=16 and x<25 else 5))))
 
-print(X.columns)
-
-X = X['Age'].to_numpy()
+X = X['Abdomen'].to_numpy()
 Y = Y.to_numpy()
 
 # Obtendo as classes existentes para classificação:
@@ -337,7 +326,10 @@ matrizConf = matrizConfusao(pred, Y_test, classes)
 dfMatrizConf = pd.DataFrame(matrizConf, columns=classes)
 dfMatrizConf.index = classes
 
+print("---------------------------------")
+print("Matriz Confusão:")
 print(dfMatrizConf)
+print("---------------------------------")
 
 # Matriz Suporte:
 
@@ -345,14 +337,22 @@ matrizSup, supportNames = matrizSuporte(matrizConf)
 dfMatrizSup = pd.DataFrame(matrizSup.T, columns=supportNames)
 dfMatrizSup.index = classes
 
-print(dfMatrizSup)
+print("---------------------------------")
+print("Matriz Suporte:")
+print(dfMatrizSup[["Accuracy", "TPR", "FPR", "F1 score"]])
+print("---------------------------------")
 
 # Modelo One X Rest:
 fig = []
 Bclasses = [0, 1]
 
+plt.figure()
+plt.plot([0, 1], [0, 1], linestyle='dashed', color="k")
+
 for i in range(len(oneXrest)):
-    print(f'---------------------------------------------------\nClasse de referência: {classes[i]}')
+    print("---------------------------------")
+    print(f'Classe de referência: {classes[i]} VS Rest')
+    print("---------------------------------")
 
     y = oneXrest[i]
     oxrclasses = list(set(y))
@@ -372,7 +372,10 @@ for i in range(len(oneXrest)):
     dfMatrizConf = pd.DataFrame(matrizConf, columns=oxrclasses)
     dfMatrizConf.index = oxrclasses
 
+    print("---------------------------------")
+    print("Matriz Confusão:")
     print(dfMatrizConf)
+    print("---------------------------------")
 
     # Matriz Suporte:
 
@@ -380,10 +383,20 @@ for i in range(len(oneXrest)):
     dfMatrizSup = pd.DataFrame(matrizSup.T, columns=supportNames)
     dfMatrizSup.index = oxrclasses
 
-    print(dfMatrizSup)
+    print("---------------------------------")
+    print("Matriz Suporte:")
+    print(dfMatrizSup[["Accuracy", "TPR", "FPR", "F1 score"]])
+    print("---------------------------------")
 
     # Curva ROC:
 
-    fig.append(ROC(Y_test, p, str(i)))
+    fpr, tpr, A = ROC(Y_test, p, str(i))
+
+    plt.plot(fpr, tpr, label=f'ROC Curve Class {classes[i]} (area = {A})')
+    plt.legend()
+    plt.grid()
+    plt.ylabel("True Positeve Rate")
+    plt.xlabel("False Positive Rate")
+    plt.title(f'Receiver Operating Characteristic')
 
 plt.show()
