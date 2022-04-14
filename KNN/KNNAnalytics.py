@@ -19,146 +19,146 @@ __email__ = "gabriel.wq@alu.ufc.br"
 __maintainer__ = "Gabriel Costa Leite"
 __status__ = "Production"
 
-class KNNAnalytics():
+class KNN():
 
-    def __init__(self, X, Y, kn=3, r=2, test_size=0.3):
-        self.X = X
-        self.Y = Y
-        self.testsize = test_size
-        self.classes = list(set(self.Y))
+    def __init__(self, kn=3, r=2):
         self.kn = kn
         self.r = r
-        self.test_size = test_size
-        self.supportName = []
-        self.matrizSup = []
-        self.matrizConf = self.matrizConfusao()
+        self.X_train = None
+        self.Y_train = None
+        self.FeaturesLabel = None
+        self.TargetLabel = None
 
-        self.oneXrest = []
+    def fit(self, X, Y): #X e Y devem ser pandas df
+        self.X_train = X.to_numpy()
+        self.Y_train = Y.to_numpy()
+        self.FeaturesLabel = X.columns
+        self.TargetClasses = list(set(Y))
 
-        for c in self.classes:
-            self.oneXrest.append(list(map(lambda x: 1 if x == c else 0 , self.Y)))
+    def predict(self, X, Y_train=None):
+        
+        if Y_train == None:
+            Y_train = self.Y_train
 
-        self.pred, self.p = self.knn()
+        def organizador(my_list1, my_list2):
+            for i in range(len(my_list1)):
+                for j in range(i + 1, len(my_list1)):
+                    if my_list1[i] > my_list1[j]:
+                        my_list1[i], my_list1[j] = my_list1[j], my_list1[i]
+                        my_list2[i], my_list2[j] = my_list2[j], my_list2[i]
+            return(my_list1, my_list2)
 
-    def modelo_multiclass(self):
-        X_train, X_test, Y_train, Y_test = train_test_split(self.X, self.Y, self.testsize)
+        def dMinkowski(p, q, r):
+            p = np.array(p)
+            q = np.array(q)
+            s = p - q
+            s = s**r
+            return (s.sum())**(1/r)
 
-    def modelo_oneXrest(self):
-
-
-    def dMinkowski(self, p, q, r):
-        p = np.array(p)
-        q = np.array(q)
-        s = p - q
-        s = s**r
-        return (s.sum())**(1/r)
-
-    def organizador(my_list1, my_list2):
-        for i in range(len(my_list1)):
-            for j in range(i + 1, len(my_list1)):
-                if my_list1[i] > my_list1[j]:
-                    my_list1[i], my_list1[j] = my_list1[j], my_list1[i]
-                    my_list2[i], my_list2[j] = my_list2[j], my_list2[i]
-        return(my_list1, my_list2)
-
-    def knn(self, X_train, Y_train, X_test):
         pred = []
         p = []
-        for i in self.X_test:
+        for i in X:
             distances = []
             index = []
             for j in range(len(self.X_train)):
-                distances.append(self.dMinkowski(i, self.X_train[j], self.r))
+                distances.append(dMinkowski(i, self.X_train[j], self.r))
                 index.append(j)
-            distances, index = self.organizador(distances, index)
+            distances, index = organizador(distances, index)
             distances = np.array(distances[0:self.kn])
             index = np.array(index[0:self.kn])
-            y_train = np.array(self.Y_train[index])
-            m = ((distances*y_train).sum())/(distances.sum())
+            y_train = np.array(Y_train[index])
+            if distances.sum() != 0:
+                m = ((distances*y_train).sum())/(distances.sum())
+                pred.append(round(m))
+            else:
+                m = np.mean(y_train)
+                pred.append(m)
             p.append(m)
-            pred.append(round(m))
         return pred, p
 
-    def matrizConfusao(self, Y_test, pred):
-        #Obtendo a matriz de confusão:
-        y_set = self.classes
-        matrizConf = np.zeros((len(y_set), len(y_set)))
-        for i in range(len(y_set)): #i -> real
-            for j in range(len(y_set)): #j -> previsao
-                nReal = 0 #total
-                nPrev = 0 #acertos
-                for k in range(len(Y_test)):
-                    if self.Y_test[k] == y_set[i]:
-                        nReal += 1
-                        if pred[k] == y_set[j]:
-                            nPrev += 1
-                matrizConf[i,j] = nPrev
-        return matrizConf
+    def matrizConfusao(self, pred, Y_test):
+        if self.TargetClasses == None:
+            print("Must fit the training data first!")
+            return None
+        else:
+            y_set = self.TargetClasses
+            matrizConf = np.zeros((len(y_set), len(y_set)))
+            for i in range(len(y_set)): #i -> real
+                for j in range(len(y_set)): #j -> previsao
+                    nReal = 0 #total
+                    nPrev = 0 #acertos
+                    for k in range(len(Y_test)):
+                        if Y_test[k] == y_set[i]:
+                            nReal += 1
+                            if pred[k] == y_set[j]:
+                                nPrev += 1
+                    matrizConf[i,j] = nPrev
+            return matrizConf
 
-    def matrizSuporte(self):
+    def matrizSuporte(self, matrizConf):
         supportName = []
         matrizSup = []
 
         #Positive Prediction:
         PP = []
-        for i in range(len(self.matrizConf[0])):
-            PP.append(self.matrizConf[:,i].sum())
+        for i in range(len(matrizConf[0])):
+            PP.append(matrizConf[:,i].sum())
         supportName.append("PP")
         PP = np.array(PP)
         matrizSup.append(PP)
 
         #Negative Prediction:
         PN = []
-        for i in range(len(self.matrizConf[0])):
-            PN.append(self.matrizConf.sum() - self.matrizConf[:,i].sum())
+        for i in range(len(matrizConf[0])):
+            PN.append(matrizConf.sum() - matrizConf[:,i].sum())
         supportName.append("PN")
         PN = np.array(PN)
         matrizSup.append(PN)
 
         #Actual Positive:
         AP = []
-        for i in range(len(self.matrizConf[0])):
-            AP.append(self.matrizConf[i].sum())
+        for i in range(len(matrizConf[0])):
+            AP.append(matrizConf[i].sum())
         supportName.append("AP")
         AP = np.array(AP)
         matrizSup.append(AP)
 
         #Actual Negative:
         AN = []
-        for i in range(len(self.matrizConf[0])):
-            AN.append(self.matrizConf.sum() - self.matrizConf[i].sum())
+        for i in range(len(matrizConf[0])):
+            AN.append(matrizConf.sum() - matrizConf[i].sum())
         supportName.append("AN")
         AN = np.array(AN)
         matrizSup.append(AN)
 
         #True positive:
         TP = []
-        for i in range(len(self.matrizConf[0])):
-            TP.append(self.matrizConf[i,i])
+        for i in range(len(matrizConf[0])):
+            TP.append(matrizConf[i,i])
         supportName.append("TP")
         TP = np.array(TP)
         matrizSup.append(TP)
 
         #False positive:
         FP = []
-        for i in range(len(self.matrizConf[0])):
-            FP.append(self.matrizConf[:,i].sum() - self.matrizConf[i,i])
+        for i in range(len(matrizConf[0])):
+            FP.append(matrizConf[:,i].sum() - matrizConf[i,i])
         supportName.append("FP")
         FP = np.array(FP)
         matrizSup.append(FP)
 
         #False positive:
         FN = []
-        for i in range(len(self.matrizConf[0])):
-            FN.append(self.matrizConf[i].sum() - self.matrizConf[i,i])
+        for i in range(len(matrizConf[0])):
+            FN.append(matrizConf[i].sum() - matrizConf[i,i])
         supportName.append("FN")
         FN = np.array(FN)
         matrizSup.append(FN)
 
         #True negative:
         TN = []
-        for i in range(len(self.matrizConf[0])):
-            TN.append(self.matrizConf.sum() - self.matrizConf[i].sum() - self.matrizConf[:,i].sum() + self.matrizConf[i,i])
+        for i in range(len(matrizConf[0])):
+            TN.append(matrizConf.sum() - matrizConf[i].sum() - matrizConf[:,i].sum() + matrizConf[i,i])
         supportName.append("TN")
         TN = np.array(TN)
         matrizSup.append(TN)
@@ -263,6 +263,69 @@ class KNNAnalytics():
         supportName.append("TS")
         matrizSup.append(TS)
 
-        return np.array(self.matrizSup), supportName
+        return np.array(matrizSup), supportName
 
-    def 
+    def ROC(self, X_test, Y_test, classe):
+
+        def areaTrap(x1, x2, y1, y2):
+            base = abs(x1 - x2)
+            h = (y1+y2)/2
+            return base*h
+
+        def organizador(my_list1, my_list2):
+            for i in range(len(my_list1)):
+                for j in range(i + 1, len(my_list1)):
+                    if my_list1[i] > my_list1[j]:
+                        my_list1[i], my_list1[j] = my_list1[j], my_list1[i]
+                        my_list2[i], my_list2[j] = my_list2[j], my_list2[i]
+            return(my_list1, my_list2)
+
+        if classe in self.TargetLabel:
+
+            Y_train = np.array(list(map(lambda x: 1 if x == classe else 0 , self.Y_train)))
+            Y_test = np.array(list(map(lambda x: 1 if x == classe else 0 , Y_test)))
+
+            pred, p = self.predict(X_test, Y_train=Y_train)
+
+            fpr = []
+            tpr = []
+            FP = 0
+            TP = 0
+            A = 0
+            FP_prev = 0
+            TP_prev = 0
+            f_prev = -1
+            L = Y_test
+            f = p
+            N = 0
+            P = 0
+            for ex in L:
+                if ex == 0:
+                    N += 1
+                else:
+                    P += 1
+            f, L = organizador(f, L)
+            L = L[::-1]
+            f = f[::-1]
+            for j in range(len(L)):
+                if f[j] != f_prev:
+                    fpr.append(FP/N)
+                    tpr.append(TP/P)
+                    A += areaTrap(FP, FP_prev, TP, TP_prev)
+                    f_prev = f[j]
+                    FP_prev = FP
+                    TP_prev = TP
+                if L[j] == 1:
+                    TP += 1
+                else:
+                    FP += 1
+            fpr.append(FP/N)
+            tpr.append(TP/P)
+            A += areaTrap(N, FP_prev, P, TP_prev)
+            A = A/(P*N)
+
+            return fpr, tpr, A
+
+        else:
+            print("Não é possível obter ROC")
+            return None
