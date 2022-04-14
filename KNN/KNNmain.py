@@ -47,9 +47,13 @@ def knn(X_train, Y_train, X_test, kn=3, r=2):
         distances = np.array(distances[0:kn])
         index = np.array(index[0:kn])
         y_train = np.array(Y_train[index])
-        m = ((distances*y_train).sum())/(distances.sum())
+        if distances.sum() != 0:
+            m = ((distances*y_train).sum())/(distances.sum())
+            pred.append(round(m))
+        else:
+            m = np.mean(y_train)
+            pred.append(m)
         p.append(m)
-        pred.append(round(m))
     return pred, p
 
 def matrizConfusao(pred, Y_test):
@@ -293,17 +297,25 @@ def ROC(Y_test, p, label):
 
 # Importação do dataset
 
-iris = datasets.load_iris()
+data = pd.read_csv("bodyfat.csv")
+print(data.head())
 
 # Nesse banco de dados, os principais valores que iremos utilizar serão as entradas (iris.data) e as saídas (iris.target)
 
-X = iris.data
+predict = 'BodyFat'
 
-Y = iris.target
+Y = data[predict]
+X = data.drop(columns=[predict])
+
+Y = Y.transform(lambda x: 1 if x <= 5 else (2 if x>5 and x<=14 else (3 if x>14 and x<16 else(4 if x>=16 and x<25 else 5))))
+
+X = X.to_numpy()
+Y = Y.to_numpy()
 
 # Obtendo as classes existentes para classificação:
 
 classes = list(set(Y))
+print(classes)
 
 # Modelos one x rest:
 
