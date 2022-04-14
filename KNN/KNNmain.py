@@ -56,8 +56,8 @@ def knn(X_train, Y_train, X_test, kn=3, r=2):
         p.append(m)
     return pred, p
 
-def matrizConfusao(pred, Y_test):
-    y_set = list(set(Y_test))
+def matrizConfusao(pred, Y_test, classes):
+    y_set = classes
     matrizConf = np.zeros((len(y_set), len(y_set)))
     for i in range(len(y_set)): #i -> real
         for j in range(len(y_set)): #j -> previsao
@@ -309,13 +309,14 @@ X = data.drop(columns=[predict])
 
 Y = Y.transform(lambda x: 1 if x <= 5 else (2 if x>5 and x<=14 else (3 if x>14 and x<16 else(4 if x>=16 and x<25 else 5))))
 
-X = X.to_numpy()
+print(X.columns)
+
+X = X['Age'].to_numpy()
 Y = Y.to_numpy()
 
 # Obtendo as classes existentes para classificação:
 
 classes = list(set(Y))
-print(classes)
 
 # Modelos one x rest:
 
@@ -329,13 +330,10 @@ for c in classes:
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2)
 
 pred, p = knn(X_train, Y_train, X_test)
-    
-print(p)
-print(f'Teste: {Y_test}\nPred:  {np.array(pred)}')
 
 # Matriz Confusão:
 
-matrizConf = matrizConfusao(pred, Y_test)
+matrizConf = matrizConfusao(pred, Y_test, classes)
 dfMatrizConf = pd.DataFrame(matrizConf, columns=classes)
 dfMatrizConf.index = classes
 
@@ -351,6 +349,7 @@ print(dfMatrizSup)
 
 # Modelo One X Rest:
 fig = []
+Bclasses = [0, 1]
 
 for i in range(len(oneXrest)):
     print(f'---------------------------------------------------\nClasse de referência: {classes[i]}')
@@ -360,15 +359,16 @@ for i in range(len(oneXrest)):
 
     X_train, X_test, Y_train, Y_test = train_test_split(X, y, test_size=0.2)
 
+    while len(list(set(Y_test))) == 1:
+        X_train, X_test, Y_train, Y_test = train_test_split(X, y, test_size=0.2)
+
     pred, p = knn(X_train, Y_train, X_test)
     
     p = np.array(p)
-    print(p)
-    print(f'Teste: {Y_test}\nPred:  {np.array(pred)}')
 
     # Matriz Confusão:
 
-    matrizConf = matrizConfusao(pred, Y_test)
+    matrizConf = matrizConfusao(pred, Y_test, Bclasses)
     dfMatrizConf = pd.DataFrame(matrizConf, columns=oxrclasses)
     dfMatrizConf.index = oxrclasses
 
