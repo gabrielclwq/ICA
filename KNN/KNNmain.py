@@ -296,107 +296,161 @@ print(data.head())
 predict = 'BodyFat'
 
 Y = data[predict]
-X = data.drop(columns=[predict])
 
 Y = Y.transform(lambda x: 1 if x <= 5 else (2 if x>5 and x<=14 else (3 if x>14 and x<16 else(4 if x>=16 and x<25 else 5))))
 
-X = X['Abdomen'].to_numpy()
-Y = Y.to_numpy()
+sair = False
 
-# Obtendo as classes existentes para classificação:
+while 1:
 
-classes = list(set(Y))
+    X = data.drop(columns=[predict])
 
-# Modelos one x rest:
+    Xlabel = [] 
 
-oneXrest = []
+    for i in X.columns:
+        Xlabel.append(i)
 
-for c in classes:
-    oneXrest.append(np.array(list(map(lambda x: 1 if x == c else 0 , Y))))
+    Xlabel.append("All")
 
-# Modelo Multiclasse:
+    print(f'Escolha os atributos a serem analisados: {Xlabel}')
+    print("Digite 'sair' para sair")
+    entrada = input("-> ")
 
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2)
+    if entrada == "sair":
+        break
+    elif entrada == "All":
+        X = X.to_numpy()
+    else:
+        c = entrada.split(", ")
+        X = X[c].to_numpy()
 
-pred, p = knn(X_train, Y_train, X_test)
+    Y = Y.to_numpy()
 
-# Matriz Confusão:
+    # Obtendo as classes existentes para classificação:
 
-matrizConf = matrizConfusao(pred, Y_test, classes)
-dfMatrizConf = pd.DataFrame(matrizConf, columns=classes)
-dfMatrizConf.index = classes
+    classes = list(set(Y))
 
-print("---------------------------------")
-print("Matriz Confusão:")
-print(dfMatrizConf)
-print("---------------------------------")
+    # Modelos one x rest:
 
-# Matriz Suporte:
+    oneXrest = []
 
-matrizSup, supportNames = matrizSuporte(matrizConf)
-dfMatrizSup = pd.DataFrame(matrizSup.T, columns=supportNames)
-dfMatrizSup.index = classes
+    for c in classes:
+        oneXrest.append(np.array(list(map(lambda x: 1 if x == c else 0 , Y))))
 
-print("---------------------------------")
-print("Matriz Suporte:")
-print(dfMatrizSup[["Accuracy", "TPR", "FPR", "F1 score"]])
-print("---------------------------------")
+    # Grid Search:
 
-# Modelo One X Rest:
-fig = []
-Bclasses = [0, 1]
+    models = []
+    acc = []
+    testsize = np.arange(0.1,1,0.1)
+    kn = range(1, 10)
 
-plt.figure()
-plt.plot([0, 1], [0, 1], linestyle='dashed', color="k")
+    for t in testsize:
+        for k in kn:
+            # Modelo Multiclasse:
 
-for i in range(len(oneXrest)):
+            X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=t)
+
+            pred, p = knn(X_train, Y_train, X_test, kn=k)
+
+            # Matriz Confusão:
+
+            matrizConf = matrizConfusao(pred, Y_test, classes)
+            dfMatrizConf = pd.DataFrame(matrizConf, columns=classes)
+            dfMatrizConf.index = classes
+
+            # Matriz Suporte:
+
+            matrizSup, supportNames = matrizSuporte(matrizConf)
+            dfMatrizSup = pd.DataFrame(matrizSup.T, columns=supportNames)
+            dfMatrizSup.index = classes
+
+        acc.append(dfMatrizSup["Accuracy"].values.sum())
+        models.append([t, k, dfMatrizConf, dfMatrizSup])
+
+    for i in range(len(models)):
+        for j in range(i + 1, len(models)):
+            if acc[i] > acc[j]:
+                models[i], models[j] = models[j], models[i]
+                acc[i], acc[j] = acc[j], acc[i]
+
+    model = models[-1]
+    t = model[0]
+    k = model[1]
+    dfMatrizConf = model[2]
+    dfMatrizSup = model[3]
+
     print("---------------------------------")
-    print(f'Classe de referência: {classes[i]} VS Rest')
+    print(f'Melhor Testsize: {t}')
     print("---------------------------------")
 
-    y = oneXrest[i]
-    oxrclasses = list(set(y))
-
-    X_train, X_test, Y_train, Y_test = train_test_split(X, y, test_size=0.2)
-
-    while len(list(set(Y_test))) == 1:
-        X_train, X_test, Y_train, Y_test = train_test_split(X, y, test_size=0.2)
-
-    pred, p = knn(X_train, Y_train, X_test)
+    print("---------------------------------")
+    print(f'Melhor KN: {k}')
+    print("---------------------------------")
     
-    p = np.array(p)
-
-    # Matriz Confusão:
-
-    matrizConf = matrizConfusao(pred, Y_test, Bclasses)
-    dfMatrizConf = pd.DataFrame(matrizConf, columns=oxrclasses)
-    dfMatrizConf.index = oxrclasses
-
     print("---------------------------------")
     print("Matriz Confusão:")
     print(dfMatrizConf)
     print("---------------------------------")
-
-    # Matriz Suporte:
-
-    matrizSup, supportNames = matrizSuporte(matrizConf)
-    dfMatrizSup = pd.DataFrame(matrizSup.T, columns=supportNames)
-    dfMatrizSup.index = oxrclasses
 
     print("---------------------------------")
     print("Matriz Suporte:")
     print(dfMatrizSup[["Accuracy", "TPR", "FPR", "F1 score"]])
     print("---------------------------------")
 
-    # Curva ROC:
+    # Modelo One X Rest:
+    Bclasses = [0, 1]
 
-    fpr, tpr, A = ROC(Y_test, p, str(i))
+    plt.figure()
+    plt.plot([0, 1], [0, 1], linestyle='dashed', color="k")
 
-    plt.plot(fpr, tpr, label=f'ROC Curve Class {classes[i]} (area = {A})')
+    for i in range(len(oneXrest)):
+        print("---------------------------------")
+        print(f'Classe de referência: {classes[i]} VS Rest')
+        print("---------------------------------")
+
+        y = oneXrest[i]
+        oxrclasses = list(set(y))
+
+        X_train, X_test, Y_train, Y_test = train_test_split(X, y, test_size=t)
+
+        while len(list(set(Y_test))) == 1:
+            X_train, X_test, Y_train, Y_test = train_test_split(X, y, test_size=t)
+
+        pred, p = knn(X_train, Y_train, X_test, kn=k)
+        
+        p = np.array(p)
+
+        # Matriz Confusão:
+
+        matrizConf = matrizConfusao(pred, Y_test, Bclasses)
+        dfMatrizConf = pd.DataFrame(matrizConf, columns=oxrclasses)
+        dfMatrizConf.index = oxrclasses
+
+        print("---------------------------------")
+        print("Matriz Confusão:")
+        print(dfMatrizConf)
+        print("---------------------------------")
+
+        # Matriz Suporte:
+
+        matrizSup, supportNames = matrizSuporte(matrizConf)
+        dfMatrizSup = pd.DataFrame(matrizSup.T, columns=supportNames)
+        dfMatrizSup.index = oxrclasses
+
+        print("---------------------------------")
+        print("Matriz Suporte:")
+        print(dfMatrizSup[["Accuracy", "TPR", "FPR", "F1 score"]])
+        print("---------------------------------")
+
+        # Curva ROC:
+
+        fpr, tpr, A = ROC(Y_test, p, str(i))
+
+        plt.plot(fpr, tpr, label=f'ROC Curve Class {classes[i]} (area = {A})')
+
     plt.legend()
     plt.grid()
     plt.ylabel("True Positeve Rate")
     plt.xlabel("False Positive Rate")
     plt.title(f'Receiver Operating Characteristic')
-
-plt.show()
+    plt.show()
