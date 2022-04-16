@@ -19,7 +19,7 @@ predict = 'BodyFat'
 
 Y = data[predict]
 X = data.drop(columns=[predict])
-Xlables = X.columns
+Xlabels = X.columns
 
 Y = Y.transform(lambda x: 1 if x <= 5 else (2 if x>5 and x<=14 else (3 if x>14 and x<16 else(4 if x>=16 and x<25 else 5))))
 
@@ -37,7 +37,7 @@ for i in range(10):
         clf = KNN()
 
         tempoTreino = time.time()
-        clf.fit(X_train, Y_train, Xlables)
+        clf.fit(X_train, Y_train, Xlabels)
         tempoTreino = time.time() - tempoTreino
 
         tempoTeste = time.time()
@@ -92,7 +92,7 @@ for r in range(1, 3):
         clf = KNN(kn=k, r=r)
 
         tempoTreino = time.time()
-        clf.fit(X_train, Y_train, Xlables)
+        clf.fit(X_train, Y_train, Xlabels)
         tempoTreino = time.time() - tempoTreino
 
         tempoTeste = time.time()
@@ -148,7 +148,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=testsize)
 clf = KNN(kn=kn, r=r)
 
 tempoTreino = time.time()
-clf.fit(X_train, Y_train, Xlables)
+clf.fit(X_train, Y_train, Xlabels)
 tempoTreino = time.time() - tempoTreino
 
 tempoTeste = time.time()
@@ -181,6 +181,100 @@ print("---------------------------------")
 print("Matriz Suporte:")
 print(dfMatrizSup[["Accuracy", "TPR", "FPR", "F1 score"]])
 print("---------------------------------")
+
+#%% Distrubuition of data
+
+Xd = X.copy()
+Yd = Y.copy()
+Xd_test = X_test.copy()
+predD = pred.copy()
+
+TargetLabels = clf.getTargetLabel()
+
+for i in range(len(Yd)):
+    for j in range(i + 1, len(Yd)):
+        if Yd[i] > Yd[j]:
+            Yd[i], Yd[j] = Yd[j], Yd[i]
+            Xd[i], Xd[j] = Xd[j], Xd[i]
+for i in range(len(predD)):
+    for j in range(i + 1, len(predD)):
+        if predD[i] > predD[j]:
+            predD[i], predD[j] = predD[j], predD[i]
+            Xd_test[i], Xd_test[j] = Xd_test[j], Xd_test[i]
+
+lens = [0]
+setY_ = list(set(Yd))
+soma = 0
+for i in range(len(setY_)):
+    for j in range(len(Yd)):
+        if Yd[j] == setY_[i]:
+            soma += 1
+    lens.append(soma)
+
+plt.figure()
+for i in range(len(setY_)):
+    plt.scatter(Xd[lens[i]:lens[i+1]-1, 0], Xd[lens[i]:lens[i+1]-1, 2])
+plt.legend(TargetLabels)
+plt.ylabel(Xlabels[2])
+plt.title("All Data Distribution")
+plt.xlabel(Xlabels[0])
+plt.grid()
+
+#%% Feature importance with Permutation
+
+modelosSuffle = []
+mseSuffle = []
+
+for i in range(len(Xlabels)):
+    Xs_train = X_train.copy()
+
+    #Suflling the collumn:
+    np.random.shuffle(Xs_train[:, i].T)
+
+    clfs = KNN(kn=kn, r=r)
+
+    tempoTreino = time.time()
+    clfs.fit(Xs_train, Y_train, Xlabels)
+    tempoTreino = time.time() - tempoTreino
+
+    tempoTeste = time.time()
+    preds, ps = clfs.predict(X_test)
+    tempoTeste = time.time() - tempoTeste
+
+    mse = clfs.MSE(preds, Y_test)
+
+    modelosSuffle.append([clfs, i, mse, tempoTeste, tempoTreino])
+    mseSuffle.append(mse)
+
+for i in range(len(mseSuffle)):
+    for j in range(i + 1, len(mseSuffle)):
+        if mseSuffle[i] > mseSuffle[j]:
+            modelosSuffle[i], modelosSuffle[j] = modelosSuffle[j], modelosSuffle[i]
+            mseSuffle[i], mseSuffle[j] = mseSuffle[j], mseSuffle[i]
+
+modelosSuffle = np.array(modelosSuffle)
+fig, axs = plt.subplots(3)
+fig.suptitle('Feature importance with Permutation')
+
+axs[0].plot(modelosSuffle[:, 2], modelosSuffle[:, 1], label="Feature")
+axs[0].set_ylabel("Feature")
+axs[0].legend()
+axs[0].grid()
+
+axs[1].plot(modelosParamns[:, 2], modelosParamns[:, 3], label="Tempo de teste")
+axs[1].set_ylabel("Tempo de teste")
+axs[1].legend()
+axs[1].grid()
+
+axs[2].plot(modelosParamns[:, 2], modelosParamns[:, 4], label="Tempo de treino")
+axs[2].set_ylabel("Tempo de treino")
+axs[2].legend()
+axs[2].grid()
+axs[2].set_xlabel("MSE")
+for ax in axs.flat:
+    ax.label_outer()
+
+#%% Get ROC curve analyses:
 
 plt.figure()
 plt.plot([0, 1], [0, 1], linestyle='dashed', color="k")

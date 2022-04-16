@@ -342,4 +342,11 @@ class KNN():
             total += 1
         accuracy = acerto/total
         return accuracy
+
+    def MSE(self, pred, Y_test):
+        e = 0
+        for i in range(len(Y_test)):
+            e += (pred[i] - Y_test[i])**2
+        e = e/len(Y_test)
+        return e
     
