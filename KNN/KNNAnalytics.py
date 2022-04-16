@@ -1,18 +1,11 @@
-from os import P_NOWAIT
-from sklearn import datasets, metrics
-from sklearn.metrics import confusion_matrix, classification_report, roc_curve, auc, roc_auc_score
-from sklearn.model_selection import train_test_split
-from sklearn.svm import SVC
 import numpy as np
-from scipy import stats
 import matplotlib.pyplot as plt
 #from svm_smo import modelo
 import pandas as pd
 import time
-from sklearn.preprocessing import label_binarize
-from itertools import cycle
+np.seterr(all="ignore")
 
-"""svm.smo.py: Support Vector Machine implementation with smo"""
+"""KNN"""
 
 __author__ = "Gabriel Costa Leite"
 __email__ = "gabriel.wq@alu.ufc.br"
@@ -29,15 +22,15 @@ class KNN():
         self.FeaturesLabel = None
         self.TargetLabel = None
 
-    def fit(self, X, Y): #X e Y devem ser pandas df
-        self.X_train = X.to_numpy()
-        self.Y_train = Y.to_numpy()
-        self.FeaturesLabel = X.columns
-        self.TargetClasses = list(set(Y))
+    def fit(self, X, Y, Xlabel=None): #X e Y devem ser pandas df
+        self.X_train = X
+        self.Y_train = Y
+        self.FeaturesLabel = Xlabel
+        self.TargetLabel = list(set(Y))
 
-    def predict(self, X, Y_train=None):
+    def predict(self, X, Y_train=[]):
         
-        if Y_train == None:
+        if len(Y_train) == 0:
             Y_train = self.Y_train
 
         def organizador(my_list1, my_list2):
@@ -74,14 +67,14 @@ class KNN():
                 m = np.mean(y_train)
                 pred.append(m)
             p.append(m)
-        return pred, p
+        return np.array(pred), np.array(p)
 
     def matrizConfusao(self, pred, Y_test):
-        if self.TargetClasses == None:
+        if self.TargetLabel == None:
             print("Must fit the training data first!")
             return None
         else:
-            y_set = self.TargetClasses
+            y_set = self.TargetLabel
             matrizConf = np.zeros((len(y_set), len(y_set)))
             for i in range(len(y_set)): #i -> real
                 for j in range(len(y_set)): #j -> previsao
@@ -329,3 +322,24 @@ class KNN():
         else:
             print("Não é possível obter ROC")
             return None
+
+    def getTargetLabel(self):
+        return self.TargetLabel
+
+    def getParams(self):
+        return self.kn, self.r
+
+    def setParams(self, kn, r):
+        self.kn = kn
+        self.r = r
+
+    def getAccuracy(self, pred, Y_test):
+        total = 0
+        acerto = 0
+        for i in range(len(Y_test)):
+            if pred[i] == Y_test[i]:
+                acerto += 1
+            total += 1
+        accuracy = acerto/total
+        return accuracy
+    
