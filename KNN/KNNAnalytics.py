@@ -14,7 +14,7 @@ __status__ = "Production"
 
 class KNN():
 
-    def __init__(self, kn=3, r=2):
+    def __init__(self, kn=5, r=2):
         self.kn = kn
         self.r = r
         self.X_train = None
