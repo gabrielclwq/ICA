@@ -143,7 +143,7 @@ for ax in axs.flat:
 
 #%% Get all analysis from the best model find
 
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=testsize)
+#X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=testsize)
 
 clf = KNN(kn=kn, r=r)
 
