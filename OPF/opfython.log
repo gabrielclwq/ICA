@@ -1,0 +1,874 @@
+2022-04-19 14:43:25,997 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:43:26,106 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:43:26,112 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:43:26,115 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:43:26,118 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:43:26,121 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:43:26,123 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:43:26,124 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:43:26,130 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:43:26,131 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:43:26,133 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:43:26,136 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:43:26,138 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:43:33,731 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:43:33,765 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:43:33,766 - opfython.models.knn_supervised — INFO — Prediction time: 0.03298044204711914 seconds.
+2022-04-19 14:43:33,853 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:43:33,870 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:43:33,947 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:43:33,948 - opfython.models.knn_supervised — INFO — Prediction time: 0.0759725570678711 seconds.
+2022-04-19 14:43:33,950 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:43:33,971 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:43:34,052 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:43:34,053 - opfython.models.knn_supervised — INFO — Prediction time: 0.07995748519897461 seconds.
+2022-04-19 14:43:34,056 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:43:34,087 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:43:34,157 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:43:34,160 - opfython.models.knn_supervised — INFO — Prediction time: 0.06895899772644043 seconds.
+2022-04-19 14:43:34,164 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:43:34,201 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:43:34,276 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:43:34,281 - opfython.models.knn_supervised — INFO — Prediction time: 0.07395625114440918 seconds.
+2022-04-19 14:43:34,284 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:43:34,319 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:43:34,404 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:43:34,405 - opfython.models.knn_supervised — INFO — Prediction time: 0.08494925498962402 seconds.
+2022-04-19 14:43:34,407 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:43:34,450 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:43:34,534 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:43:34,535 - opfython.models.knn_supervised — INFO — Prediction time: 0.08095240592956543 seconds.
+2022-04-19 14:43:34,537 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:43:34,584 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:43:34,686 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:43:34,687 - opfython.models.knn_supervised — INFO — Prediction time: 0.1009376049041748 seconds.
+2022-04-19 14:43:34,688 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:43:34,739 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:43:34,850 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:43:34,852 - opfython.models.knn_supervised — INFO — Prediction time: 0.10993528366088867 seconds.
+2022-04-19 14:43:34,853 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:43:34,916 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:43:35,036 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:43:35,037 - opfython.models.knn_supervised — INFO — Prediction time: 0.11793184280395508 seconds.
+2022-04-19 14:43:35,039 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:43:35,054 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:43:35,057 - opfython.models.knn_supervised — INFO — Training time: 8.916582107543945 seconds.
+2022-04-19 14:43:35,058 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:43:35,081 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:43:35,082 - opfython.models.knn_supervised — INFO — Prediction time: 0.019987821578979492 seconds.
+2022-04-19 14:45:46,072 - opfython.stream.loader — INFO — Loading file: bodyfat.csv ...
+2022-04-19 14:46:33,244 - opfython.stream.loader — INFO — Loading file: bodyfat.csv ...
+2022-04-19 14:46:33,261 - opfython.stream.loader — INFO — File loaded.
+2022-04-19 14:46:33,265 - opfython.stream.parser — INFO — Parsing data ...
+2022-04-19 14:46:33,369 - opfython.utils.exception — ERROR — ValueError: Parsed data should have sequential labels, e.g., 0, 1, ..., n-1.
+2022-04-19 14:46:55,825 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:46:55,828 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:46:55,829 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:46:55,831 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:46:55,833 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:46:55,834 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:46:55,836 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:46:55,837 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:46:55,839 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:46:55,842 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:46:55,846 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:46:55,848 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:46:55,849 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:46:55,870 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:55,924 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:55,925 - opfython.models.knn_supervised — INFO — Prediction time: 0.052973031997680664 seconds.
+2022-04-19 14:46:55,929 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:46:55,953 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:56,015 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:56,016 - opfython.models.knn_supervised — INFO — Prediction time: 0.0599668025970459 seconds.
+2022-04-19 14:46:56,022 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:46:56,053 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:56,136 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:56,139 - opfython.models.knn_supervised — INFO — Prediction time: 0.0809624195098877 seconds.
+2022-04-19 14:46:56,141 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:46:56,176 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:56,268 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:56,270 - opfython.models.knn_supervised — INFO — Prediction time: 0.08295464515686035 seconds.
+2022-04-19 14:46:56,272 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:46:56,306 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:56,373 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:56,374 - opfython.models.knn_supervised — INFO — Prediction time: 0.06596040725708008 seconds.
+2022-04-19 14:46:56,379 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:46:56,466 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:56,687 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:56,689 - opfython.models.knn_supervised — INFO — Prediction time: 0.21987390518188477 seconds.
+2022-04-19 14:46:56,692 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:46:56,785 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:57,038 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:57,040 - opfython.models.knn_supervised — INFO — Prediction time: 0.24985694885253906 seconds.
+2022-04-19 14:46:57,042 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:46:57,115 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:57,371 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:57,382 - opfython.models.knn_supervised — INFO — Prediction time: 0.2528548240661621 seconds.
+2022-04-19 14:46:57,385 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:46:57,465 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:57,624 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:57,625 - opfython.models.knn_supervised — INFO — Prediction time: 0.15791010856628418 seconds.
+2022-04-19 14:46:57,630 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:46:57,737 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:57,971 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:57,973 - opfython.models.knn_supervised — INFO — Prediction time: 0.23086786270141602 seconds.
+2022-04-19 14:46:57,975 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:46:58,004 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:46:58,006 - opfython.models.knn_supervised — INFO — Training time: 2.1547670364379883 seconds.
+2022-04-19 14:46:58,007 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:58,032 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:58,036 - opfython.models.knn_supervised — INFO — Prediction time: 0.022987842559814453 seconds.
+2022-04-19 14:46:58,070 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:46:58,074 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:46:58,076 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:46:58,081 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:46:58,083 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:46:58,084 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:46:58,086 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:46:58,087 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:46:58,089 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:46:58,090 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:46:58,091 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:46:58,094 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:46:58,097 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:46:58,121 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:58,230 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:58,231 - opfython.models.knn_supervised — INFO — Prediction time: 0.10593986511230469 seconds.
+2022-04-19 14:46:58,233 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:46:58,261 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:58,369 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:58,371 - opfython.models.knn_supervised — INFO — Prediction time: 0.10593724250793457 seconds.
+2022-04-19 14:46:58,373 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:46:58,415 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:58,540 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:58,541 - opfython.models.knn_supervised — INFO — Prediction time: 0.12292814254760742 seconds.
+2022-04-19 14:46:58,547 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:46:58,586 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:58,746 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:58,747 - opfython.models.knn_supervised — INFO — Prediction time: 0.15890789031982422 seconds.
+2022-04-19 14:46:58,749 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:46:58,780 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:58,874 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:58,875 - opfython.models.knn_supervised — INFO — Prediction time: 0.09194540977478027 seconds.
+2022-04-19 14:46:58,876 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:46:58,915 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:58,989 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:58,990 - opfython.models.knn_supervised — INFO — Prediction time: 0.07295370101928711 seconds.
+2022-04-19 14:46:58,992 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:46:59,042 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:59,133 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:59,134 - opfython.models.knn_supervised — INFO — Prediction time: 0.08693885803222656 seconds.
+2022-04-19 14:46:59,136 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:46:59,170 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:59,269 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:59,270 - opfython.models.knn_supervised — INFO — Prediction time: 0.09794259071350098 seconds.
+2022-04-19 14:46:59,272 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:46:59,307 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:59,438 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:59,439 - opfython.models.knn_supervised — INFO — Prediction time: 0.12992382049560547 seconds.
+2022-04-19 14:46:59,441 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:46:59,519 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:59,640 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:59,641 - opfython.models.knn_supervised — INFO — Prediction time: 0.11992859840393066 seconds.
+2022-04-19 14:46:59,642 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:46:59,667 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:46:59,668 - opfython.models.knn_supervised — INFO — Training time: 1.570098638534546 seconds.
+2022-04-19 14:46:59,669 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:46:59,691 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:46:59,692 - opfython.models.knn_supervised — INFO — Prediction time: 0.01898813247680664 seconds.
+2022-04-19 14:52:30,734 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:52:30,738 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:52:30,740 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:52:30,741 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:52:30,743 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:52:30,745 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:52:30,746 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:52:30,748 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:52:30,749 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:52:30,751 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:52:30,753 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:52:30,755 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:52:30,756 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:52:30,781 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:30,849 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:30,851 - opfython.models.knn_supervised — INFO — Prediction time: 0.06597280502319336 seconds.
+2022-04-19 14:52:30,855 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:52:30,880 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:30,954 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:30,956 - opfython.models.knn_supervised — INFO — Prediction time: 0.07096099853515625 seconds.
+2022-04-19 14:52:30,958 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:52:30,982 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:31,060 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:31,064 - opfython.models.knn_supervised — INFO — Prediction time: 0.07695484161376953 seconds.
+2022-04-19 14:52:31,067 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:52:31,109 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:31,249 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:31,251 - opfython.models.knn_supervised — INFO — Prediction time: 0.13792204856872559 seconds.
+2022-04-19 14:52:31,263 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:52:31,334 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:31,451 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:31,455 - opfython.models.knn_supervised — INFO — Prediction time: 0.11493420600891113 seconds.
+2022-04-19 14:52:31,458 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:52:31,496 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:31,626 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:31,628 - opfython.models.knn_supervised — INFO — Prediction time: 0.12792658805847168 seconds.
+2022-04-19 14:52:31,630 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:52:31,679 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:31,793 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:31,794 - opfython.models.knn_supervised — INFO — Prediction time: 0.11293292045593262 seconds.
+2022-04-19 14:52:31,796 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:52:31,848 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:31,959 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:31,960 - opfython.models.knn_supervised — INFO — Prediction time: 0.10993480682373047 seconds.
+2022-04-19 14:52:31,961 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:52:32,003 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:32,127 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:32,128 - opfython.models.knn_supervised — INFO — Prediction time: 0.12092852592468262 seconds.
+2022-04-19 14:52:32,130 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:52:32,180 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:32,299 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:32,300 - opfython.models.knn_supervised — INFO — Prediction time: 0.11892890930175781 seconds.
+2022-04-19 14:52:32,304 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:52:32,321 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:52:32,322 - opfython.models.knn_supervised — INFO — Training time: 1.5651040077209473 seconds.
+2022-04-19 14:52:32,326 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:32,348 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:32,350 - opfython.models.knn_supervised — INFO — Prediction time: 0.021987438201904297 seconds.
+2022-04-19 14:52:32,356 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:52:32,359 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:52:32,361 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:52:32,362 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:52:32,364 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:52:32,367 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:52:32,371 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:52:32,373 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:52:32,374 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:52:32,375 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:52:32,377 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:52:32,379 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:52:32,380 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:52:32,405 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:32,495 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:32,498 - opfython.models.knn_supervised — INFO — Prediction time: 0.08694887161254883 seconds.
+2022-04-19 14:52:32,501 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:52:32,530 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:32,618 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:32,620 - opfython.models.knn_supervised — INFO — Prediction time: 0.08495044708251953 seconds.
+2022-04-19 14:52:32,623 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:52:32,647 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:32,711 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:32,712 - opfython.models.knn_supervised — INFO — Prediction time: 0.06296181678771973 seconds.
+2022-04-19 14:52:32,714 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:52:32,732 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:32,814 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:32,816 - opfython.models.knn_supervised — INFO — Prediction time: 0.08095216751098633 seconds.
+2022-04-19 14:52:32,817 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:52:32,846 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:32,927 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:32,928 - opfython.models.knn_supervised — INFO — Prediction time: 0.07995200157165527 seconds.
+2022-04-19 14:52:32,931 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:52:32,973 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:33,048 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:33,049 - opfython.models.knn_supervised — INFO — Prediction time: 0.07195186614990234 seconds.
+2022-04-19 14:52:33,051 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:52:33,082 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:33,177 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:33,178 - opfython.models.knn_supervised — INFO — Prediction time: 0.09394407272338867 seconds.
+2022-04-19 14:52:33,180 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:52:33,228 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:33,349 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:33,350 - opfython.models.knn_supervised — INFO — Prediction time: 0.1189277172088623 seconds.
+2022-04-19 14:52:33,357 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:52:33,409 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:33,517 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:33,518 - opfython.models.knn_supervised — INFO — Prediction time: 0.10593795776367188 seconds.
+2022-04-19 14:52:33,523 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:52:33,567 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:33,688 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:33,689 - opfython.models.knn_supervised — INFO — Prediction time: 0.11895418167114258 seconds.
+2022-04-19 14:52:33,691 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:52:33,705 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:52:33,707 - opfython.models.knn_supervised — INFO — Training time: 1.3242409229278564 seconds.
+2022-04-19 14:52:33,709 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:33,728 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:33,729 - opfython.models.knn_supervised — INFO — Prediction time: 0.0179901123046875 seconds.
+2022-04-19 14:52:41,371 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:52:41,374 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:52:41,376 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:52:41,377 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:52:41,379 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:52:41,380 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:52:41,382 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:52:41,383 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:52:41,384 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:52:41,387 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:52:41,388 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:52:41,390 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:52:41,391 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:52:41,413 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:41,524 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:41,527 - opfython.models.knn_supervised — INFO — Prediction time: 0.10593986511230469 seconds.
+2022-04-19 14:52:41,530 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:52:41,583 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:41,699 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:41,704 - opfython.models.knn_supervised — INFO — Prediction time: 0.11093354225158691 seconds.
+2022-04-19 14:52:41,707 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:52:41,738 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:41,833 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:41,837 - opfython.models.knn_supervised — INFO — Prediction time: 0.09194636344909668 seconds.
+2022-04-19 14:52:41,841 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:52:41,874 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:41,967 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:41,973 - opfython.models.knn_supervised — INFO — Prediction time: 0.09194707870483398 seconds.
+2022-04-19 14:52:41,978 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:52:42,015 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:42,143 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:42,146 - opfython.models.knn_supervised — INFO — Prediction time: 0.12694168090820312 seconds.
+2022-04-19 14:52:42,148 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:52:42,189 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:42,307 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:42,307 - opfython.models.knn_supervised — INFO — Prediction time: 0.11493182182312012 seconds.
+2022-04-19 14:52:42,309 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:52:42,339 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:42,450 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:42,451 - opfython.models.knn_supervised — INFO — Prediction time: 0.10793685913085938 seconds.
+2022-04-19 14:52:42,457 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:52:42,499 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:42,616 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:42,617 - opfython.models.knn_supervised — INFO — Prediction time: 0.11593198776245117 seconds.
+2022-04-19 14:52:42,621 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:52:42,666 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:42,767 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:42,770 - opfython.models.knn_supervised — INFO — Prediction time: 0.09994029998779297 seconds.
+2022-04-19 14:52:42,773 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:52:42,842 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:42,966 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:42,967 - opfython.models.knn_supervised — INFO — Prediction time: 0.12292861938476562 seconds.
+2022-04-19 14:52:42,971 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:52:42,983 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:52:42,987 - opfython.models.knn_supervised — INFO — Training time: 1.5920865535736084 seconds.
+2022-04-19 14:52:42,988 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:43,016 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:43,022 - opfython.models.knn_supervised — INFO — Prediction time: 0.02698540687561035 seconds.
+2022-04-19 14:52:43,025 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:52:43,026 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:52:43,028 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:52:43,029 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:52:43,033 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:52:43,038 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:52:43,041 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:52:43,043 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:52:43,044 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:52:43,045 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:52:43,046 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:52:43,049 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:52:43,051 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:52:43,073 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:43,145 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:43,149 - opfython.models.knn_supervised — INFO — Prediction time: 0.06796121597290039 seconds.
+2022-04-19 14:52:43,157 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:52:43,188 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:43,271 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:43,273 - opfython.models.knn_supervised — INFO — Prediction time: 0.08195137977600098 seconds.
+2022-04-19 14:52:43,277 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:52:43,300 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:43,373 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:43,374 - opfython.models.knn_supervised — INFO — Prediction time: 0.07295751571655273 seconds.
+2022-04-19 14:52:43,375 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:52:43,395 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:43,482 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:43,483 - opfython.models.knn_supervised — INFO — Prediction time: 0.08595013618469238 seconds.
+2022-04-19 14:52:43,488 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:52:43,511 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:43,600 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:43,604 - opfython.models.knn_supervised — INFO — Prediction time: 0.08794808387756348 seconds.
+2022-04-19 14:52:43,606 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:52:43,628 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:43,744 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:43,745 - opfython.models.knn_supervised — INFO — Prediction time: 0.11493325233459473 seconds.
+2022-04-19 14:52:43,747 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:52:43,775 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:43,894 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:43,895 - opfython.models.knn_supervised — INFO — Prediction time: 0.11693048477172852 seconds.
+2022-04-19 14:52:43,897 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:52:43,930 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:44,057 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:44,058 - opfython.models.knn_supervised — INFO — Prediction time: 0.12392711639404297 seconds.
+2022-04-19 14:52:44,060 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:52:44,121 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:44,213 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:44,214 - opfython.models.knn_supervised — INFO — Prediction time: 0.09097003936767578 seconds.
+2022-04-19 14:52:44,219 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:52:44,284 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:44,398 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:44,399 - opfython.models.knn_supervised — INFO — Prediction time: 0.10893607139587402 seconds.
+2022-04-19 14:52:44,404 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:52:44,431 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:52:44,433 - opfython.models.knn_supervised — INFO — Training time: 1.3802106380462646 seconds.
+2022-04-19 14:52:44,437 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:52:44,459 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:52:44,461 - opfython.models.knn_supervised — INFO — Prediction time: 0.02098822593688965 seconds.
+2022-04-19 14:53:20,475 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:53:20,477 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:53:20,478 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:53:20,479 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:53:20,484 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:53:20,485 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:53:20,487 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:53:20,488 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:53:20,489 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:53:20,491 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:53:20,492 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:53:20,494 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:53:20,495 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:53:20,517 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:53:20,578 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:53:20,579 - opfython.models.knn_supervised — INFO — Prediction time: 0.056966543197631836 seconds.
+2022-04-19 14:53:20,586 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:53:20,605 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:53:20,679 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:53:20,680 - opfython.models.knn_supervised — INFO — Prediction time: 0.07296037673950195 seconds.
+2022-04-19 14:53:20,685 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:53:20,717 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:53:20,809 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:53:20,812 - opfython.models.knn_supervised — INFO — Prediction time: 0.08994889259338379 seconds.
+2022-04-19 14:53:20,814 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:53:20,853 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:53:20,964 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:53:20,968 - opfython.models.knn_supervised — INFO — Prediction time: 0.10893988609313965 seconds.
+2022-04-19 14:53:20,973 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:53:21,010 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:53:21,139 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:53:21,140 - opfython.models.knn_supervised — INFO — Prediction time: 0.12292885780334473 seconds.
+2022-04-19 14:53:21,143 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:53:21,196 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:53:21,302 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:53:21,303 - opfython.models.knn_supervised — INFO — Prediction time: 0.10394001007080078 seconds.
+2022-04-19 14:53:21,305 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:53:21,330 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:53:21,471 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:53:21,472 - opfython.models.knn_supervised — INFO — Prediction time: 0.13692069053649902 seconds.
+2022-04-19 14:53:21,474 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:53:21,541 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:53:21,660 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:53:21,661 - opfython.models.knn_supervised — INFO — Prediction time: 0.11693239212036133 seconds.
+2022-04-19 14:53:21,664 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:53:21,709 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:53:21,853 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:53:21,854 - opfython.models.knn_supervised — INFO — Prediction time: 0.14291667938232422 seconds.
+2022-04-19 14:53:21,856 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:53:21,897 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:53:22,037 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:53:22,038 - opfython.models.knn_supervised — INFO — Prediction time: 0.13592052459716797 seconds.
+2022-04-19 14:53:22,041 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:53:22,060 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:53:22,061 - opfython.models.knn_supervised — INFO — Training time: 1.5651018619537354 seconds.
+2022-04-19 14:53:22,063 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:53:22,094 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:53:22,096 - opfython.models.knn_supervised — INFO — Prediction time: 0.023986339569091797 seconds.
+2022-04-19 14:54:08,754 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:54:08,757 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:54:08,758 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:54:08,759 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:54:08,761 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:54:08,764 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:54:08,765 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:54:08,767 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:54:08,769 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:54:08,771 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:54:08,772 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:54:08,774 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:54:08,775 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:54:08,799 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:08,867 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:08,868 - opfython.models.knn_supervised — INFO — Prediction time: 0.06496262550354004 seconds.
+2022-04-19 14:54:08,871 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:54:08,897 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:09,008 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:09,009 - opfython.models.knn_supervised — INFO — Prediction time: 0.10694074630737305 seconds.
+2022-04-19 14:54:09,015 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:54:09,041 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:09,123 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:09,127 - opfython.models.knn_supervised — INFO — Prediction time: 0.0799558162689209 seconds.
+2022-04-19 14:54:09,137 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:54:09,174 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:09,258 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:09,259 - opfython.models.knn_supervised — INFO — Prediction time: 0.08194994926452637 seconds.
+2022-04-19 14:54:09,262 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:54:09,299 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:09,392 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:09,393 - opfython.models.knn_supervised — INFO — Prediction time: 0.09094738960266113 seconds.
+2022-04-19 14:54:09,398 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:54:09,434 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:09,531 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:09,533 - opfython.models.knn_supervised — INFO — Prediction time: 0.09594368934631348 seconds.
+2022-04-19 14:54:09,537 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:54:09,583 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:09,719 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:09,720 - opfython.models.knn_supervised — INFO — Prediction time: 0.13392186164855957 seconds.
+2022-04-19 14:54:09,721 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:54:09,766 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:09,861 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:09,865 - opfython.models.knn_supervised — INFO — Prediction time: 0.09394526481628418 seconds.
+2022-04-19 14:54:09,867 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:54:09,937 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:10,087 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:10,088 - opfython.models.knn_supervised — INFO — Prediction time: 0.14891266822814941 seconds.
+2022-04-19 14:54:10,089 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:54:10,133 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:10,284 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:10,285 - opfython.models.knn_supervised — INFO — Prediction time: 0.15091323852539062 seconds.
+2022-04-19 14:54:10,288 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:54:10,309 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:54:10,314 - opfython.models.knn_supervised — INFO — Training time: 1.5341198444366455 seconds.
+2022-04-19 14:54:10,318 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:10,343 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:10,347 - opfython.models.knn_supervised — INFO — Prediction time: 0.022986412048339844 seconds.
+2022-04-19 14:54:15,319 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:54:15,320 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:54:15,322 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:54:15,323 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:54:15,325 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:54:15,326 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:54:15,330 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:54:15,332 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:54:15,333 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:54:15,335 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:54:15,336 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:54:15,338 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:54:15,339 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:54:15,360 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:15,408 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:15,410 - opfython.models.knn_supervised — INFO — Prediction time: 0.04297637939453125 seconds.
+2022-04-19 14:54:15,414 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:54:15,447 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:15,537 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:15,540 - opfython.models.knn_supervised — INFO — Prediction time: 0.08894801139831543 seconds.
+2022-04-19 14:54:15,548 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:54:15,597 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:15,710 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:15,717 - opfython.models.knn_supervised — INFO — Prediction time: 0.10993599891662598 seconds.
+2022-04-19 14:54:15,719 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:54:15,759 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:15,882 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:15,884 - opfython.models.knn_supervised — INFO — Prediction time: 0.11693429946899414 seconds.
+2022-04-19 14:54:15,886 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:54:15,917 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:16,043 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:16,048 - opfython.models.knn_supervised — INFO — Prediction time: 0.12392783164978027 seconds.
+2022-04-19 14:54:16,051 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:54:16,105 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:16,219 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:16,220 - opfython.models.knn_supervised — INFO — Prediction time: 0.11193394660949707 seconds.
+2022-04-19 14:54:16,222 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:54:16,253 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:16,373 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:16,374 - opfython.models.knn_supervised — INFO — Prediction time: 0.11893057823181152 seconds.
+2022-04-19 14:54:16,377 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:54:16,453 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:16,590 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:16,591 - opfython.models.knn_supervised — INFO — Prediction time: 0.13492202758789062 seconds.
+2022-04-19 14:54:16,593 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:54:16,652 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:16,785 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:16,786 - opfython.models.knn_supervised — INFO — Prediction time: 0.1319258213043213 seconds.
+2022-04-19 14:54:16,788 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:54:16,859 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:16,965 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:16,966 - opfython.models.knn_supervised — INFO — Prediction time: 0.10494017601013184 seconds.
+2022-04-19 14:54:16,968 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:54:16,986 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:54:16,987 - opfython.models.knn_supervised — INFO — Training time: 1.64605712890625 seconds.
+2022-04-19 14:54:16,990 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:54:17,014 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:54:17,018 - opfython.models.knn_supervised — INFO — Prediction time: 0.020997285842895508 seconds.
+2022-04-19 14:55:36,354 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:55:36,359 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:55:36,360 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:55:36,361 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:55:36,363 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:55:36,365 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:55:36,365 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:55:36,366 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:55:36,367 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:55:36,367 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:55:36,368 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:55:36,369 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:55:36,370 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:55:36,920 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:55:37,036 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:55:37,038 - opfython.models.knn_supervised — INFO — Prediction time: 0.09294652938842773 seconds.
+2022-04-19 14:55:37,045 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:55:37,088 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:55:37,167 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:55:37,167 - opfython.models.knn_supervised — INFO — Prediction time: 0.06695914268493652 seconds.
+2022-04-19 14:55:37,169 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:55:37,196 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:55:37,263 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:55:37,264 - opfython.models.knn_supervised — INFO — Prediction time: 0.0649566650390625 seconds.
+2022-04-19 14:55:37,265 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:55:37,287 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:55:37,344 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:55:37,345 - opfython.models.knn_supervised — INFO — Prediction time: 0.05697369575500488 seconds.
+2022-04-19 14:55:37,346 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:55:37,368 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:55:37,433 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:55:37,434 - opfython.models.knn_supervised — INFO — Prediction time: 0.06496024131774902 seconds.
+2022-04-19 14:55:37,435 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:55:37,465 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:55:37,539 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:55:37,540 - opfython.models.knn_supervised — INFO — Prediction time: 0.07298088073730469 seconds.
+2022-04-19 14:55:37,541 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:55:37,574 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:55:37,648 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:55:37,648 - opfython.models.knn_supervised — INFO — Prediction time: 0.07395696640014648 seconds.
+2022-04-19 14:55:37,650 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:55:37,687 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:55:37,887 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:55:37,889 - opfython.models.knn_supervised — INFO — Prediction time: 0.18589353561401367 seconds.
+2022-04-19 14:55:37,908 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:55:37,992 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:55:38,135 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:55:38,136 - opfython.models.knn_supervised — INFO — Prediction time: 0.14091777801513672 seconds.
+2022-04-19 14:55:38,138 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:55:38,200 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:55:38,399 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:55:38,400 - opfython.models.knn_supervised — INFO — Prediction time: 0.19688677787780762 seconds.
+2022-04-19 14:55:38,402 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:55:38,429 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:55:38,431 - opfython.models.knn_supervised — INFO — Training time: 2.0588314533233643 seconds.
+2022-04-19 14:55:38,431 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:55:38,453 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:55:38,460 - opfython.models.knn_supervised — INFO — Prediction time: 0.019987821578979492 seconds.
+2022-04-19 14:56:45,643 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:56:45,646 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:56:45,647 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:56:45,648 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:56:45,653 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:56:45,653 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:56:45,654 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:56:45,655 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:56:45,655 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:56:45,656 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:56:45,657 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:56:45,657 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:56:45,658 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:56:46,040 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:46,079 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:46,080 - opfython.models.knn_supervised — INFO — Prediction time: 0.037980079650878906 seconds.
+2022-04-19 14:56:46,082 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:56:46,099 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:46,150 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:46,152 - opfython.models.knn_supervised — INFO — Prediction time: 0.047974586486816406 seconds.
+2022-04-19 14:56:46,153 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:56:46,176 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:46,235 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:46,239 - opfython.models.knn_supervised — INFO — Prediction time: 0.05696225166320801 seconds.
+2022-04-19 14:56:46,241 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:56:46,262 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:46,322 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:46,323 - opfython.models.knn_supervised — INFO — Prediction time: 0.05994462966918945 seconds.
+2022-04-19 14:56:46,324 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:56:46,348 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:46,420 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:46,421 - opfython.models.knn_supervised — INFO — Prediction time: 0.07096242904663086 seconds.
+2022-04-19 14:56:46,422 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:56:46,445 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:46,509 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:46,509 - opfython.models.knn_supervised — INFO — Prediction time: 0.06294369697570801 seconds.
+2022-04-19 14:56:46,511 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:56:46,542 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:46,616 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:46,618 - opfython.models.knn_supervised — INFO — Prediction time: 0.07294774055480957 seconds.
+2022-04-19 14:56:46,620 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:56:46,654 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:46,732 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:46,733 - opfython.models.knn_supervised — INFO — Prediction time: 0.07697582244873047 seconds.
+2022-04-19 14:56:46,735 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:56:46,765 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:46,852 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:46,853 - opfython.models.knn_supervised — INFO — Prediction time: 0.08695006370544434 seconds.
+2022-04-19 14:56:46,854 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:56:46,886 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:46,986 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:46,987 - opfython.models.knn_supervised — INFO — Prediction time: 0.0989387035369873 seconds.
+2022-04-19 14:56:46,988 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:56:47,006 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:56:47,006 - opfython.models.knn_supervised — INFO — Training time: 1.3484258651733398 seconds.
+2022-04-19 14:56:47,008 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:47,023 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:47,024 - opfython.models.knn_supervised — INFO — Prediction time: 0.0159909725189209 seconds.
+2022-04-19 14:56:57,337 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:56:57,338 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:56:57,338 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:56:57,339 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:56:57,340 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:56:57,341 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:56:57,341 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:56:57,342 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:56:57,343 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:56:57,343 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:56:57,344 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:56:57,345 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:56:57,345 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:56:57,728 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:57,767 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:57,769 - opfython.models.knn_supervised — INFO — Prediction time: 0.037995100021362305 seconds.
+2022-04-19 14:56:57,773 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:56:57,790 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:57,832 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:57,834 - opfython.models.knn_supervised — INFO — Prediction time: 0.0410003662109375 seconds.
+2022-04-19 14:56:57,835 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:56:57,853 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:57,902 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:57,904 - opfython.models.knn_supervised — INFO — Prediction time: 0.0479736328125 seconds.
+2022-04-19 14:56:57,906 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:56:57,928 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:57,993 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:57,997 - opfython.models.knn_supervised — INFO — Prediction time: 0.06396031379699707 seconds.
+2022-04-19 14:56:57,999 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:56:58,029 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:58,091 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:58,092 - opfython.models.knn_supervised — INFO — Prediction time: 0.061963558197021484 seconds.
+2022-04-19 14:56:58,093 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:56:58,120 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:58,188 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:58,188 - opfython.models.knn_supervised — INFO — Prediction time: 0.06798028945922852 seconds.
+2022-04-19 14:56:58,190 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:56:58,219 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:58,292 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:58,292 - opfython.models.knn_supervised — INFO — Prediction time: 0.07197737693786621 seconds.
+2022-04-19 14:56:58,293 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:56:58,323 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:58,400 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:58,401 - opfython.models.knn_supervised — INFO — Prediction time: 0.07597756385803223 seconds.
+2022-04-19 14:56:58,402 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:56:58,438 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:58,526 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:58,526 - opfython.models.knn_supervised — INFO — Prediction time: 0.08695054054260254 seconds.
+2022-04-19 14:56:58,528 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:56:58,565 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:58,673 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:58,674 - opfython.models.knn_supervised — INFO — Prediction time: 0.10592460632324219 seconds.
+2022-04-19 14:56:58,676 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:56:58,687 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:56:58,688 - opfython.models.knn_supervised — INFO — Training time: 1.3414008617401123 seconds.
+2022-04-19 14:56:58,689 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:56:58,704 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:56:58,705 - opfython.models.knn_supervised — INFO — Prediction time: 0.01298213005065918 seconds.
+2022-04-19 14:57:03,387 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:57:03,388 - opfython.stream.splitter — DEBUG — X_1: (201, 14) | X_2: (51, 14) | Y_1: (201,) | Y_2: (51,).
+2022-04-19 14:57:03,389 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:57:03,391 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 14:57:03,391 - opfython.stream.splitter — DEBUG — X_1: (50, 14) | X_2: (151, 14) | Y_1: (50,) | Y_2: (151,).
+2022-04-19 14:57:03,392 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 14:57:03,393 - opfython.models.knn_supervised — INFO — Overriding class: OPF -> KNNSupervisedOPF.
+2022-04-19 14:57:03,393 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 14:57:03,394 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 14:57:03,395 - opfython.core.opf — INFO — Class created.
+2022-04-19 14:57:03,396 - opfython.models.knn_supervised — INFO — Class overrided.
+2022-04-19 14:57:03,396 - opfython.models.knn_supervised — INFO — Fitting classifier ...
+2022-04-19 14:57:03,397 - opfython.models.knn_supervised — INFO — Learning best `k` value ...
+2022-04-19 14:57:03,770 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:57:03,805 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:57:03,807 - opfython.models.knn_supervised — INFO — Prediction time: 0.03498268127441406 seconds.
+2022-04-19 14:57:03,809 - opfython.models.knn_supervised — INFO — Accuracy over k = 1: 0.6518444262376102
+2022-04-19 14:57:03,824 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:57:03,865 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:57:03,867 - opfython.models.knn_supervised — INFO — Prediction time: 0.03999662399291992 seconds.
+2022-04-19 14:57:03,869 - opfython.models.knn_supervised — INFO — Accuracy over k = 2: 0.6028299501839498
+2022-04-19 14:57:03,886 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:57:03,931 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:57:03,934 - opfython.models.knn_supervised — INFO — Prediction time: 0.04499244689941406 seconds.
+2022-04-19 14:57:03,936 - opfython.models.knn_supervised — INFO — Accuracy over k = 3: 0.5838438086380087
+2022-04-19 14:57:03,955 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:57:04,011 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:57:04,012 - opfython.models.knn_supervised — INFO — Prediction time: 0.05596566200256348 seconds.
+2022-04-19 14:57:04,014 - opfython.models.knn_supervised — INFO — Accuracy over k = 4: 0.5842120785337617
+2022-04-19 14:57:04,039 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:57:04,102 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:57:04,103 - opfython.models.knn_supervised — INFO — Prediction time: 0.061963558197021484 seconds.
+2022-04-19 14:57:04,105 - opfython.models.knn_supervised — INFO — Accuracy over k = 5: 0.5910167121353236
+2022-04-19 14:57:04,130 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:57:04,205 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:57:04,206 - opfython.models.knn_supervised — INFO — Prediction time: 0.07397961616516113 seconds.
+2022-04-19 14:57:04,207 - opfython.models.knn_supervised — INFO — Accuracy over k = 6: 0.5833333333333333
+2022-04-19 14:57:04,238 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:57:04,329 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:57:04,330 - opfython.models.knn_supervised — INFO — Prediction time: 0.08994388580322266 seconds.
+2022-04-19 14:57:04,331 - opfython.models.knn_supervised — INFO — Accuracy over k = 7: 0.5833333333333333
+2022-04-19 14:57:04,362 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:57:04,444 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:57:04,444 - opfython.models.knn_supervised — INFO — Prediction time: 0.08095312118530273 seconds.
+2022-04-19 14:57:04,446 - opfython.models.knn_supervised — INFO — Accuracy over k = 8: 0.5833333333333333
+2022-04-19 14:57:04,480 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:57:04,572 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:57:04,572 - opfython.models.knn_supervised — INFO — Prediction time: 0.0919487476348877 seconds.
+2022-04-19 14:57:04,574 - opfython.models.knn_supervised — INFO — Accuracy over k = 9: 0.5833333333333333
+2022-04-19 14:57:04,613 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:57:04,711 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:57:04,711 - opfython.models.knn_supervised — INFO — Prediction time: 0.09694695472717285 seconds.
+2022-04-19 14:57:04,713 - opfython.models.knn_supervised — INFO — Accuracy over k = 10: 0.5833333333333333
+2022-04-19 14:57:04,745 - opfython.models.knn_supervised — INFO — Classifier has been fitted with k = 1.
+2022-04-19 14:57:04,746 - opfython.models.knn_supervised — INFO — Training time: 1.3474934101104736 seconds.
+2022-04-19 14:57:04,747 - opfython.models.knn_supervised — INFO — Predicting data ...
+2022-04-19 14:57:04,760 - opfython.models.knn_supervised — INFO — Data has been predicted.
+2022-04-19 14:57:04,761 - opfython.models.knn_supervised — INFO — Prediction time: 0.012991189956665039 seconds.
+2022-04-19 15:07:38,304 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 15:07:38,307 - opfython.stream.splitter — DEBUG — X_1: (126, 14) | X_2: (126, 14) | Y_1: (126,) | Y_2: (126,).
+2022-04-19 15:07:38,308 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 15:07:38,308 - opfython.models.supervised — INFO — Overriding class: OPF -> SupervisedOPF.
+2022-04-19 15:07:38,309 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 15:07:38,310 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 15:07:38,310 - opfython.core.opf — INFO — Class created.
+2022-04-19 15:07:38,311 - opfython.models.supervised — INFO — Class overrided.
+2022-04-19 15:07:38,312 - opfython.models.supervised — INFO — Fitting classifier ...
+2022-04-19 15:07:38,315 - opfython.models.supervised — DEBUG — Finding prototypes ...
+2022-04-19 15:07:38,719 - opfython.models.supervised — DEBUG — Prototypes: [101, 0, 29, 110, 33, 108, 72, 100, 121, 34, 64, 13, 14, 106, 17, 18, 76, 43, 70, 12, 104, 80, 59, 55, 97, 125, 118, 25, 93, 124, 50, 20, 71, 102, 79, 90, 30, 109, 32, 86, 24, 87, 6, 112, 95, 83, 47, 96, 8, 41, 44, 2, 7, 114, 113, 119, 3, 58, 81, 105, 39, 51, 57, 123, 31, 54, 60, 9, 82, 88, 15, 74, 91, 23, 67].
+2022-04-19 15:07:38,769 - opfython.models.supervised — INFO — Classifier has been fitted.
+2022-04-19 15:07:38,771 - opfython.models.supervised — INFO — Training time: 0.45643115043640137 seconds.
+2022-04-19 15:07:38,772 - opfython.models.supervised — INFO — Predicting data ...
+2022-04-19 15:07:38,894 - opfython.models.supervised — INFO — Data has been predicted.
+2022-04-19 15:07:38,895 - opfython.models.supervised — INFO — Prediction time: 0.12192821502685547 seconds.
+2022-04-19 15:08:57,090 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 15:08:57,091 - opfython.stream.splitter — DEBUG — X_1: (126, 14) | X_2: (126, 14) | Y_1: (126,) | Y_2: (126,).
+2022-04-19 15:08:57,091 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 15:08:57,092 - opfython.models.supervised — INFO — Overriding class: OPF -> SupervisedOPF.
+2022-04-19 15:08:57,092 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 15:08:57,093 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 15:08:57,094 - opfython.core.opf — INFO — Class created.
+2022-04-19 15:08:57,094 - opfython.models.supervised — INFO — Class overrided.
+2022-04-19 15:08:57,095 - opfython.models.supervised — INFO — Fitting classifier ...
+2022-04-19 15:08:57,100 - opfython.models.supervised — DEBUG — Finding prototypes ...
+2022-04-19 15:08:57,509 - opfython.models.supervised — DEBUG — Prototypes: [101, 0, 29, 110, 33, 108, 72, 100, 121, 34, 64, 13, 14, 106, 17, 18, 76, 43, 70, 12, 104, 80, 59, 55, 97, 125, 118, 25, 93, 124, 50, 20, 71, 102, 79, 90, 30, 109, 32, 86, 24, 87, 6, 112, 95, 83, 47, 96, 8, 41, 44, 2, 7, 114, 113, 119, 3, 58, 81, 105, 39, 51, 57, 123, 31, 54, 60, 9, 82, 88, 15, 74, 91, 23, 67].
+2022-04-19 15:08:57,562 - opfython.models.supervised — INFO — Classifier has been fitted.
+2022-04-19 15:08:57,567 - opfython.models.supervised — INFO — Training time: 0.4638543128967285 seconds.
+2022-04-19 15:08:57,568 - opfython.models.supervised — INFO — Predicting data ...
+2022-04-19 15:08:57,722 - opfython.models.supervised — INFO — Data has been predicted.
+2022-04-19 15:08:57,723 - opfython.models.supervised — INFO — Prediction time: 0.15291166305541992 seconds.
+2022-04-19 15:10:33,753 - opfython.stream.loader — INFO — Loading file: boat.txt...
+2022-04-19 15:10:33,796 - opfython.stream.loader — ERROR — boat.txt not found.
+2022-04-19 15:10:33,797 - opfython.stream.parser — INFO — Parsing data ...
+2022-04-19 15:10:33,797 - opfython.stream.parser — ERROR — 'NoneType' object is not subscriptable
+2022-04-19 15:10:33,798 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 15:10:51,433 - opfython.stream.loader — INFO — Loading file: boat.txt...
+2022-04-19 15:10:51,438 - opfython.stream.loader — INFO — File loaded.
+2022-04-19 15:10:51,438 - opfython.stream.parser — INFO — Parsing data ...
+2022-04-19 15:10:51,439 - opfython.stream.parser — INFO — Data parsed.
+2022-04-19 15:10:51,440 - opfython.stream.splitter — INFO — Splitting data ...
+2022-04-19 15:10:51,441 - opfython.stream.splitter — DEBUG — X_1: (50, 2) | X_2: (50, 2) | Y_1: (50,) | Y_2: (50,).
+2022-04-19 15:10:51,442 - opfython.stream.splitter — INFO — Data splitted.
+2022-04-19 15:10:51,442 - opfython.models.supervised — INFO — Overriding class: OPF -> SupervisedOPF.
+2022-04-19 15:10:51,443 - opfython.core.opf — INFO — Creating class: OPF.
+2022-04-19 15:10:51,443 - opfython.core.opf — DEBUG — Distance: log_squared_euclidean | Pre-computed distance: False.
+2022-04-19 15:10:51,444 - opfython.core.opf — INFO — Class created.
+2022-04-19 15:10:51,445 - opfython.models.supervised — INFO — Class overrided.
+2022-04-19 15:10:51,445 - opfython.models.supervised — INFO — Fitting classifier ...
+2022-04-19 15:10:51,447 - opfython.models.supervised — DEBUG — Finding prototypes ...
+2022-04-19 15:10:51,802 - opfython.models.supervised — DEBUG — Prototypes: [48, 0, 10, 5, 25, 31, 33, 23, 34, 45, 21].
+2022-04-19 15:10:51,813 - opfython.models.supervised — INFO — Classifier has been fitted.
+2022-04-19 15:10:51,813 - opfython.models.supervised — INFO — Training time: 0.3661031723022461 seconds.
+2022-04-19 15:10:51,814 - opfython.models.supervised — INFO — Predicting data ...
+2022-04-19 15:10:51,826 - opfython.models.supervised — INFO — Data has been predicted.
+2022-04-19 15:10:51,828 - opfython.models.supervised — INFO — Prediction time: 0.011990785598754883 seconds.
