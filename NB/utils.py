@@ -1,4 +1,5 @@
 from math import sqrt
+import logging
 
 # Split the dataset by class values, returns a dictionary
 def separate_by_class(dataset):
@@ -34,3 +35,5 @@ def summarize_by_class(dataset):
 	for class_value, rows in separated.items():
 		summaries[class_value] = summarize_dataset(rows)
 	return summaries
+
+
