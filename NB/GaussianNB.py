@@ -56,6 +56,7 @@ class GaussianNB:
         start = time.time()
 
         y = np.zeros(len(X))
+        scores = np.zeros(len(X))
 
         def gaussian_probability(x, mean, stdev):
             exponent = exp(-((x-mean)**2 / (2 * stdev**2 )))
@@ -84,11 +85,12 @@ class GaussianNB:
                         best_prob = probability
                         best_label = class_value
                 y[j] = best_label
+                scores[j] = best_prob
             
         end = time.time()
 
         self.test_time = end - start
 
-        return y
+        return y, scores
 
 
