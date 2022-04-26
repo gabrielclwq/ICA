@@ -4,6 +4,22 @@ from math import sqrt, pi, exp
 import time
 import utils
 
+# Functio of gaussian probability
+def gaussian_probability(x, mean, stdev):
+    exponent = exp(-((x-mean)**2 / (2 * stdev**2 )))
+    return (1 / (sqrt(2 * pi) * stdev)) * exponent
+
+# Calculate the probabilities of predicting each class for a given row
+def calculate_class_probabilities(summaries, row):
+    total_rows = sum([summaries[label][0][2] for label in summaries])
+    probabilities = dict()
+    for class_value, class_summaries in summaries.items():
+        probabilities[class_value] = summaries[class_value][0][2]/float(total_rows)
+        for i in range(len(class_summaries)):
+            mean, stdev, _ = class_summaries[i]
+            probabilities[class_value] *= gaussian_probability(row[i], mean, stdev)
+    return probabilities
+
 class GaussianNB:
     """A basic class to define Gaussian Naive Bayes-related methods.
 
@@ -19,8 +35,8 @@ class GaussianNB:
         self.summaries = None
         self.train_time = None
         self.test_time = None
+        self.score_time = None
     
-    # Fit the training data
     def fit(self, X, y):
         """Fits data in the classifier.
 
@@ -56,22 +72,6 @@ class GaussianNB:
         start = time.time()
 
         y = np.zeros(len(X))
-        scores = np.zeros(len(X))
-
-        def gaussian_probability(x, mean, stdev):
-            exponent = exp(-((x-mean)**2 / (2 * stdev**2 )))
-            return (1 / (sqrt(2 * pi) * stdev)) * exponent
-
-        # Calculate the probabilities of predicting each class for a given row
-        def calculate_class_probabilities(summaries, row):
-            total_rows = sum([summaries[label][0][2] for label in summaries])
-            probabilities = dict()
-            for class_value, class_summaries in summaries.items():
-                probabilities[class_value] = summaries[class_value][0][2]/float(total_rows)
-                for i in range(len(class_summaries)):
-                    mean, stdev, _ = class_summaries[i]
-                    probabilities[class_value] *= gaussian_probability(row[i], mean, stdev)
-            return probabilities
 
         if self.summaries == None:
             print("The dataset must be fitted")
@@ -85,12 +85,49 @@ class GaussianNB:
                         best_prob = probability
                         best_label = class_value
                 y[j] = best_label
-                scores[j] = best_prob
             
         end = time.time()
 
         self.test_time = end - start
 
-        return y, scores
+        return y
+
+    def scores(self, X):
+        """Return the scores from the predicted data with the fitted dataset.
+
+        Args:
+            X (np.array): Array of test features.
+        
+        Return:
+            scores (np.array): Array of predicted data's scores 
+
+        """
+
+        start = time.time()
+
+        scores = np.zeros(len(X))
+
+        if self.summaries == None:
+            print("The dataset must be fitted")
+            return None
+        else:
+            for j in range(len(X)):
+                probabilities = calculate_class_probabilities(self.summaries, X[j])
+                best_label, best_prob = None, -1
+                for class_value, probability in probabilities.items():
+                    if best_label is None or probability > best_prob:
+                        best_prob = probability
+                        best_label = class_value
+                
+                # Gets the best probability and divide by the sum of all giving a normalized score
+                scores[j] = best_prob/(sum(probabilities.values()))
+            
+        end = time.time()
+
+        self.score_time = end - start
+
+        return scores
+
+
 
 
