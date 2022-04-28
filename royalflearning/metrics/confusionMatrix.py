@@ -46,8 +46,9 @@ def matrizSuporte(matrizConf):
         Return:
             matrizSup (np.array): support matrix.
             supportName (list): list of statistics analyses names computed.
-
+            
     """
+
     getTargetLabel = matrizConf.columns.values
 
     matrizConf = matrizConf.to_numpy()
