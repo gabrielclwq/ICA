@@ -1,0 +1,676 @@
+,HT,AT,SHT,AHT,+3.5,-3.5,OS,+>=-,target
+0,Chapecoense,Coritiba,2,1,4.3,1.18,3,0,0
+1,Palmeiras,Atlético Mineiro,2,2,4.0,1.2,4,0,1
+2,Fluminense,Joinville,1,0,3.75,1.22,1,0,0
+3,Grêmio,Ponte Preta,3,3,4.2,1.2,6,0,1
+4,Athletico-PR,Internacional,3,0,4.0,1.2,3,0,0
+5,Cruzeiro,Corinthians,0,1,4.0,1.2,1,0,0
+6,São Paulo,Flamengo,2,1,3.9,1.22,3,0,0
+7,Sport Recife,Figueirense,4,1,4.1,1.2,5,0,1
+8,Avaí,Santos,1,1,3.75,1.22,2,0,0
+9,Vasco da Gama,Goiás,0,0,4.3,1.2,0,0,0
+10,Coritiba,Grêmio,2,0,4.75,1.16,2,0,0
+11,Goiás,Athletico-PR,2,0,4.6,1.17,2,0,0
+12,Corinthians,Chapecoense,1,0,4.3,1.2,1,0,0
+13,Figueirense,Vasco da Gama,0,0,4.3,1.2,0,0,0
+14,Atlético Mineiro,Fluminense,4,1,3.9,1.22,5,0,1
+15,Flamengo,Sport Recife,2,2,3.75,1.25,4,0,1
+16,Santos,Cruzeiro,1,0,3.75,1.25,1,0,0
+17,Internacional,Avaí,1,0,3.1,1.33,1,0,0
+18,Joinville,Palmeiras,0,0,4.15,1.2,0,0,0
+19,Ponte Preta,São Paulo,1,0,3.75,1.22,1,0,0
+20,São Paulo,Joinville,3,0,3.75,1.22,3,0,0
+21,Vasco da Gama,Internacional,1,1,4.25,1.2,2,0,0
+22,Grêmio,Figueirense,1,0,3.8,1.22,1,0,0
+23,Palmeiras,Goiás,0,1,3.9,1.22,1,0,0
+24,Athletico-PR,Atlético Mineiro,1,0,3.5,1.28,1,0,0
+25,Avaí,Flamengo,2,1,4.0,1.2,3,0,0
+26,Chapecoense,Santos,1,0,4.3,1.2,1,0,0
+27,Fluminense,Corinthians,0,0,4.4,1.18,0,0,0
+28,Cruzeiro,Ponte Preta,1,1,3.75,1.25,2,0,0
+29,Sport Recife,Coritiba,1,0,4.15,1.2,1,0,0
+30,São Paulo,Joinville,3,0,3.75,1.22,3,0,0
+31,Vasco da Gama,Internacional,1,1,4.25,1.2,2,0,0
+32,Grêmio,Figueirense,1,0,3.8,1.22,1,0,0
+33,Palmeiras,Goiás,0,1,3.9,1.22,1,0,0
+34,Athletico-PR,Atlético Mineiro,1,0,3.5,1.28,1,0,0
+35,Chapecoense,Santos,1,0,4.3,1.2,1,0,0
+36,Fluminense,Corinthians,0,0,4.4,1.18,0,0,0
+37,Cruzeiro,Ponte Preta,1,1,3.75,1.25,2,0,0
+38,Sport Recife,Coritiba,1,0,4.15,1.2,1,0,0
+39,Athletico-PR,Figueirense,1,0,4.3,1.18,1,0,0
+40,Chapecoense,Joinville,2,0,4.3,1.18,2,0,0
+41,Vasco da Gama,Ponte Preta,0,3,4.25,1.2,3,0,0
+42,São Paulo,Santos,3,2,3.9,1.22,5,0,1
+43,São Paulo,Santos,3,2,3.9,1.22,5,0,1
+44,Cruzeiro,Flamengo,1,0,3.75,1.25,1,0,0
+45,Grêmio,Corinthians,3,1,5.1,1.15,4,0,1
+46,Fluminense,Coritiba,2,0,4.0,1.22,2,0,0
+47,Sport Recife,Goiás,1,0,4.3,1.2,1,0,0
+48,Atlético Mineiro,Cruzeiro,1,3,3.1,1.33,4,0,1
+49,Flamengo,Chapecoense,1,0,4.3,1.18,1,0,0
+50,Santos,Ponte Preta,2,2,3.5,1.25,4,0,1
+51,Athletico-PR,Vasco da Gama,2,0,4.0,1.22,2,0,0
+52,Joinville,Corinthians,0,1,4.9,1.16,1,0,0
+53,São Paulo,Grêmio,2,0,4.3,1.18,2,0,0
+54,Internacional,Coritiba,2,0,4.0,1.22,2,0,0
+55,Figueirense,Palmeiras,2,1,4.3,1.2,3,0,0
+56,Fluminense,Sport Recife,0,0,3.9,1.22,0,0,0
+57,Goiás,Avaí,0,1,4.3,1.18,1,0,0
+58,Atlético Mineiro,Santos,2,2,2.7,1.42,4,0,1
+59,Chapecoense,São Paulo,0,1,4.8,1.16,1,0,0
+60,Corinthians,Internacional,2,1,4.9,1.16,3,0,0
+61,Coritiba,Flamengo,0,1,4.3,1.18,1,0,0
+62,Sport Recife,Joinville,2,1,4.3,1.2,3,0,0
+63,Vasco da Gama,Cruzeiro,1,3,4.6,1.2,4,0,1
+64,Ponte Preta,Goiás,0,0,4.35,1.2,0,0,0
+65,Avaí,Figueirense,1,1,4.3,1.18,2,0,0
+66,Grêmio,Athletico-PR,2,1,4.7,1.2,3,0,0
+67,Palmeiras,Fluminense,2,1,4.4,1.2,3,0,0
+68,Figueirense,Internacional,0,0,4.5,1.18,0,0,0
+69,Flamengo,Atlético Mineiro,0,2,3.2,1.3,2,0,0
+70,Santos,Corinthians,1,0,4.35,1.2,1,0,0
+71,Grêmio,Palmeiras,1,0,4.8,1.18,1,0,0
+72,Athletico-PR,Coritiba,2,2,4.3,1.2,4,0,1
+73,Joinville,Goiás,2,1,5.35,1.15,3,0,0
+74,São Paulo,Avaí,1,1,3.4,1.31,2,0,0
+75,Fluminense,Ponte Preta,2,0,4.25,1.2,2,0,0
+76,Avaí,Grêmio,1,2,5.0,1.18,3,0,0
+77,Chapecoense,Sport Recife,1,1,4.3,1.18,2,0,0
+78,Corinthians,Figueirense,2,1,4.3,1.18,3,0,0
+79,Atlético Mineiro,Joinville,1,0,2.6,1.48,1,0,0
+80,Coritiba,Cruzeiro,1,0,4.2,1.2,1,0,0
+81,Goiás,Fluminense,1,2,4.75,1.18,3,0,0
+82,Palmeiras,São Paulo,4,0,4.5,1.18,4,0,1
+83,Ponte Preta,Athletico-PR,2,1,4.35,1.25,3,0,0
+84,Internacional,Santos,1,0,3.75,1.22,1,0,0
+85,Vasco da Gama,Flamengo,1,0,4.55,1.2,1,0,0
+86,Sport Recife,Internacional,3,0,4.25,1.2,3,0,0
+87,Atlético Mineiro,Coritiba,2,0,2.75,1.45,2,0,0
+88,Atlético Mineiro,Coritiba,2,0,2.75,1.45,2,0,0
+89,Athletico-PR,São Paulo,2,1,4.4,1.2,3,0,0
+90,Grêmio,Cruzeiro,1,0,4.0,1.2,1,0,0
+91,Joinville,Flamengo,0,1,4.5,1.18,1,0,0
+92,Corinthians,Ponte Preta,2,0,4.3,1.18,2,0,0
+93,Fluminense,Santos,2,1,4.45,1.25,3,0,0
+94,Coritiba,Joinville,0,0,4.4,1.18,0,0,0
+95,Chapecoense,Vasco da Gama,1,0,5.0,1.16,1,0,0
+96,Cruzeiro,Athletico-PR,2,0,3.75,1.22,2,0,0
+97,Goiás,Corinthians,0,0,5.2,1.16,0,0,0
+98,Santos,Grêmio,1,3,4.3,1.18,4,0,1
+99,São Paulo,Fluminense,0,0,3.5,1.28,0,0,0
+100,Ponte Preta,Palmeiras,0,2,3.5,1.25,2,0,0
+101,Chapecoense,Grêmio,1,0,5.5,1.15,1,0,0
+102,Coritiba,Ponte Preta,0,0,4.3,1.23,0,0,0
+103,Goiás,Santos,4,1,4.55,1.18,5,0,1
+104,Figueirense,Joinville,0,2,4.8,1.16,2,0,0
+105,Figueirense,Joinville,0,2,4.8,1.16,2,0,0
+106,Internacional,Flamengo,1,2,4.5,1.2,3,0,0
+107,Vasco da Gama,São Paulo,0,4,4.6,1.17,4,0,1
+108,Corinthians,Athletico-PR,2,0,4.45,1.2,2,0,0
+109,Fluminense,Cruzeiro,1,0,4.0,1.22,1,0,0
+110,Grêmio,Vasco da Gama,2,0,3.75,1.25,2,0,0
+111,Santos,Figueirense,3,0,3.75,1.25,3,0,0
+112,Ponte Preta,Atlético Mineiro,0,2,3.3,1.3,2,0,0
+113,Flamengo,Corinthians,0,3,5.25,1.15,3,0,0
+114,Avaí,Chapecoense,2,1,5.0,1.16,3,0,0
+115,Flamengo,Grêmio,1,0,4.8,1.18,1,0,0
+116,Internacional,Goiás,2,1,4.65,1.2,3,0,0
+117,Corinthians,Atlético Mineiro,1,0,4.3,1.24,1,0,0
+118,Athletico-PR,Chapecoense,1,0,4.8,1.18,1,0,0
+119,Palmeiras,Santos,1,0,3.6,1.27,1,0,0
+120,Sport Recife,São Paulo,2,0,3.75,1.25,2,0,0
+121,Cruzeiro,Avaí,1,1,2.9,1.38,2,0,0
+122,Avaí,Athletico-PR,1,2,4.0,1.2,3,0,0
+123,Grêmio,Sport Recife,1,1,3.5,1.25,2,0,0
+124,Chapecoense,Fluminense,2,1,4.15,1.2,3,0,0
+125,Santos,Joinville,2,0,3.75,1.25,2,0,0
+126,Goiás,Flamengo,0,1,4.4,1.18,1,0,0
+127,Ponte Preta,Internacional,0,0,4.0,1.22,0,0,0
+128,São Paulo,Cruzeiro,1,0,4.1,1.2,1,0,0
+129,Atlético Mineiro,São Paulo,3,1,3.4,1.3,4,0,1
+130,Corinthians,Vasco da Gama,3,0,3.6,1.25,3,0,0
+131,Fluminense,Grêmio,1,0,4.4,1.18,1,0,0
+132,Fluminense,Grêmio,1,0,4.4,1.18,1,0,0
+133,Figueirense,Ponte Preta,3,1,4.4,1.18,4,0,1
+134,Flamengo,Santos,2,2,3.75,1.25,4,0,1
+135,Internacional,Chapecoense,0,0,4.2,1.2,0,0,0
+136,Joinville,Avaí,2,0,4.25,1.2,2,0,0
+137,Sport Recife,Cruzeiro,0,0,4.1,1.2,0,0,0
+138,Avaí,Fluminense,1,0,4.0,1.2,1,0,0
+139,Santos,Coritiba,3,0,3.4,1.3,3,0,0
+140,Athletico-PR,Sport Recife,1,1,4.0,1.22,2,0,0
+141,Vasco da Gama,Joinville,0,0,5.0,1.16,0,0,0
+142,Cruzeiro,Palmeiras,2,1,4.25,1.2,3,0,0
+143,Ponte Preta,Flamengo,1,0,4.3,1.2,1,0,0
+144,São Paulo,Corinthians,1,1,5.25,1.15,2,0,0
+145,Grêmio,Internacional,5,0,4.2,1.2,5,0,1
+146,Coritiba,Palmeiras,2,1,4.0,1.2,3,0,0
+147,Flamengo,Athletico-PR,3,2,3.75,1.22,5,0,1
+148,Figueirense,São Paulo,0,2,4.1,1.2,2,0,0
+149,Internacional,Fluminense,1,0,4.3,1.18,1,0,0
+150,Ponte Preta,Avaí,2,0,3.75,1.22,2,0,0
+151,Atlético Mineiro,Grêmio,0,2,3.75,1.25,2,0,0
+152,Joinville,Cruzeiro,3,0,5.0,1.16,3,0,0
+153,Athletico-PR,Santos,0,0,3.75,1.22,0,0,0
+154,Vasco da Gama,Coritiba,0,1,4.3,1.2,1,0,0
+155,São Paulo,Goiás,0,3,4.0,1.22,3,0,0
+156,Palmeiras,Flamengo,4,2,3.75,1.22,6,0,1
+157,Avaí,Corinthians,1,2,4.4,1.18,3,0,0
+158,Cruzeiro,Internacional,0,0,4.3,1.2,0,0,0
+159,Fluminense,Figueirense,2,1,4.3,1.2,3,0,0
+160,Sport Recife,Ponte Preta,1,1,3.75,1.25,2,0,0
+161,Grêmio,Joinville,2,1,3.75,1.25,3,0,0
+162,Santos,Avaí,5,2,3.0,1.35,7,0,1
+163,Figueirense,Sport Recife,2,1,4.1,1.2,3,0,0
+164,Coritiba,Chapecoense,1,0,4.75,1.16,1,0,0
+165,Ponte Preta,Grêmio,0,0,4.3,1.18,0,0,0
+166,Corinthians,Cruzeiro,3,0,4.3,1.18,3,0,0
+167,Flamengo,São Paulo,2,1,3.5,1.25,3,0,0
+168,Internacional,Athletico-PR,2,0,4.0,1.2,2,0,0
+169,Joinville,Fluminense,2,1,4.3,1.18,3,0,0
+170,Atlético Mineiro,Palmeiras,2,1,3.1,1.35,3,0,0
+171,São Paulo,Ponte Preta,3,0,3.75,1.25,3,0,0
+172,Avaí,Internacional,3,0,4.1,1.2,3,0,0
+173,Grêmio,Coritiba,0,0,4.5,1.18,0,0,0
+174,Chapecoense,Corinthians,1,3,5.5,1.13,4,0,1
+175,Fluminense,Atlético Mineiro,1,2,3.4,1.28,3,0,0
+176,Palmeiras,Joinville,3,2,3.3,1.3,5,0,1
+177,Sport Recife,Flamengo,0,1,3.6,1.25,1,0,0
+178,Athletico-PR,Goiás,3,0,4.3,1.18,3,0,0
+179,Cruzeiro,Santos,0,1,4.3,1.2,1,0,0
+180,Internacional,Vasco da Gama,6,0,3.75,1.25,6,0,1
+181,Joinville,São Paulo,0,0,3.75,1.25,0,0,0
+182,Ponte Preta,Cruzeiro,1,2,4.2,1.2,3,0,0
+183,Atlético Mineiro,Athletico-PR,0,1,3.0,1.35,1,0,0
+184,Atlético Mineiro,Athletico-PR,0,1,3.0,1.35,1,0,0
+185,Corinthians,Fluminense,2,0,4.3,1.2,2,0,0
+186,Coritiba,Sport Recife,0,0,4.0,1.22,0,0,0
+187,Goiás,Palmeiras,1,0,4.1,1.2,1,0,0
+188,Santos,Chapecoense,3,1,3.75,1.22,4,0,1
+189,São Paulo,Internacional,2,0,3.75,1.25,2,0,0
+190,Vasco da Gama,Atlético Mineiro,1,2,3.2,1.3,3,0,0
+191,Athletico-PR,Joinville,0,0,4.0,1.2,0,0,0
+192,Cruzeiro,Figueirense,5,1,4.0,1.22,6,0,1
+193,Avaí,Coritiba,0,2,4.3,1.2,2,0,0
+194,Fluminense,Flamengo,1,3,4.3,1.18,4,0,1
+195,Grêmio,Goiás,2,1,4.8,1.16,3,0,0
+196,Palmeiras,Corinthians,3,3,4.25,1.2,6,0,1
+197,Sport Recife,Santos,1,1,3.6,1.25,2,0,0
+198,Atlético Mineiro,Avaí,2,0,2.5,1.48,2,0,0
+199,Internacional,Palmeiras,1,0,3.75,1.25,1,0,0
+200,Ponte Preta,Vasco da Gama,0,1,3.75,1.25,1,0,0
+201,Figueirense,Athletico-PR,1,1,4.3,1.18,2,0,0
+202,Figueirense,Athletico-PR,1,1,4.3,1.18,2,0,0
+203,Santos,São Paulo,3,0,3.75,1.25,3,0,0
+204,Goiás,Sport Recife,1,0,4.4,1.18,1,0,0
+205,Flamengo,Cruzeiro,2,0,4.0,1.22,2,0,0
+206,Joinville,Chapecoense,0,0,5.25,1.15,0,0,0
+207,Palmeiras,Figueirense,2,0,3.1,1.33,2,0,0
+208,Corinthians,Joinville,3,0,3.5,1.28,3,0,0
+209,Ponte Preta,Santos,3,1,4.0,1.22,4,0,1
+210,Chapecoense,Flamengo,1,3,5.75,1.12,4,0,1
+211,Grêmio,São Paulo,1,2,3.75,1.22,3,0,0
+212,Vasco da Gama,Athletico-PR,2,0,4.3,1.2,2,0,0
+213,Avaí,Goiás,2,1,4.75,1.17,3,0,0
+214,Sport Recife,Fluminense,1,0,3.75,1.25,1,0,0
+215,Fluminense,Palmeiras,1,4,3.8,1.22,5,0,1
+216,Goiás,Ponte Preta,1,2,3.75,1.25,3,0,0
+217,Joinville,Sport Recife,1,1,4.3,1.18,2,0,0
+218,Athletico-PR,Grêmio,1,2,4.1,1.2,3,0,0
+219,Athletico-PR,Grêmio,1,2,4.1,1.2,3,0,0
+220,Cruzeiro,Vasco da Gama,2,2,3.5,1.25,4,0,1
+221,Internacional,Corinthians,2,1,4.3,1.18,3,0,0
+222,Santos,Atlético Mineiro,4,0,3.1,1.33,4,0,1
+223,São Paulo,Chapecoense,0,0,3.75,1.25,0,0,0
+224,Flamengo,Coritiba,0,2,4.0,1.22,2,0,0
+225,Internacional,Figueirense,1,1,4.0,1.2,2,0,0
+226,Ponte Preta,Fluminense,3,1,4.3,1.2,4,0,1
+227,Corinthians,Santos,2,0,3.9,1.22,2,0,0
+228,Goiás,Joinville,3,0,4.3,1.2,3,0,0
+229,Atlético Mineiro,Flamengo,4,1,3.2,1.33,5,0,1
+230,Avaí,São Paulo,2,1,4.0,1.22,3,0,0
+231,Vasco da Gama,Sport Recife,2,1,4.2,1.2,3,0,0
+232,Chapecoense,Cruzeiro,0,2,5.25,1.15,2,0,0
+233,Coritiba,Athletico-PR,2,0,5.0,1.16,2,0,0
+234,Fluminense,Goiás,2,0,4.0,1.22,2,0,0
+235,Grêmio,Avaí,3,1,3.75,1.22,4,0,1
+236,Athletico-PR,Ponte Preta,1,2,4.3,1.18,3,0,0
+237,Santos,Internacional,3,1,3.75,1.22,4,0,1
+238,Figueirense,Corinthians,1,3,4.3,1.2,4,0,1
+239,Flamengo,Vasco da Gama,1,2,3.5,1.28,3,0,0
+240,Joinville,Atlético Mineiro,2,2,3.75,1.25,4,0,1
+241,São Paulo,Palmeiras,1,1,3.4,1.3,2,0,0
+242,Cruzeiro,Coritiba,2,0,4.15,1.2,2,0,0
+243,Sport Recife,Chapecoense,3,0,4.75,1.17,3,0,0
+244,Coritiba,Atlético Mineiro,0,3,3.5,1.28,3,0,0
+245,Internacional,Sport Recife,2,1,3.75,1.25,3,0,0
+246,São Paulo,Athletico-PR,1,0,4.0,1.2,1,0,0
+247,Avaí,Vasco da Gama,1,1,4.0,1.22,2,0,0
+248,Flamengo,Joinville,2,0,3.25,1.3,2,0,0
+249,Cruzeiro,Grêmio,0,0,4.3,1.18,0,0,0
+250,Goiás,Figueirense,2,3,4.3,1.2,5,0,1
+251,Ponte Preta,Corinthians,2,2,4.0,1.2,4,0,1
+252,Santos,Fluminense,3,1,3.4,1.28,4,0,1
+253,Chapecoense,Palmeiras,5,1,4.75,1.17,6,0,1
+254,Atlético Mineiro,Internacional,2,1,2.65,1.45,3,0,0
+255,Sport Recife,Avaí,3,0,3.75,1.25,3,0,0
+256,Figueirense,Flamengo,3,0,4.0,1.22,3,0,0
+257,Joinville,Coritiba,3,1,4.8,1.16,4,0,1
+258,Joinville,Coritiba,3,1,4.8,1.16,4,0,1
+259,Athletico-PR,Cruzeiro,2,2,4.3,1.2,4,0,1
+260,Fluminense,São Paulo,2,0,3.8,1.22,2,0,0
+261,Corinthians,Goiás,3,0,3.75,1.25,3,0,0
+262,Avaí,Palmeiras,1,3,4.0,1.2,4,0,1
+263,Joinville,Figueirense,1,0,4.3,1.2,1,0,0
+264,Cruzeiro,Fluminense,2,0,4.0,1.22,2,0,0
+265,Ponte Preta,Coritiba,3,0,4.3,1.2,3,0,0
+266,Athletico-PR,Corinthians,1,4,4.15,1.2,5,0,1
+267,Grêmio,Chapecoense,2,3,4.0,1.2,5,0,1
+268,Santos,Goiás,3,1,3.4,1.3,4,0,1
+269,Sport Recife,Atlético Mineiro,4,1,3.2,1.3,5,0,1
+270,Fluminense,Athletico-PR,0,1,4.3,1.2,1,0,0
+271,Figueirense,Santos,0,0,3.6,1.25,0,0,0
+272,Internacional,Joinville,1,0,3.5,1.25,1,0,0
+273,Palmeiras,Sport Recife,0,2,3.2,1.33,2,0,0
+274,Chapecoense,Avaí,0,0,4.4,1.18,0,0,0
+275,Corinthians,Flamengo,1,0,3.75,1.25,1,0,0
+276,Coritiba,São Paulo,1,2,3.75,1.22,3,0,0
+277,Vasco da Gama,Grêmio,0,0,4.3,1.2,0,0,0
+278,Atlético Mineiro,Ponte Preta,2,1,3.0,1.38,3,0,0
+279,São Paulo,Sport Recife,3,0,3.4,1.3,3,0,0
+280,Avaí,Cruzeiro,1,1,4.0,1.22,2,0,0
+281,Ponte Preta,Joinville,1,0,4.0,1.2,1,0,0
+282,Coritiba,Figueirense,1,1,4.3,1.2,2,0,0
+283,Atlético Mineiro,Corinthians,0,3,3.5,1.25,3,0,0
+284,Chapecoense,Athletico-PR,0,0,4.0,1.22,0,0,0
+285,Grêmio,Flamengo,2,0,4.0,1.22,2,0,0
+286,Santos,Palmeiras,2,1,3.2,1.33,3,0,0
+287,Vasco da Gama,Fluminense,0,1,3.9,1.22,1,0,0
+288,Goiás,Internacional,2,1,4.25,1.2,3,0,0
+289,Internacional,Ponte Preta,1,0,3.5,1.25,1,0,0
+290,Athletico-PR,Avaí,2,1,4.0,1.22,3,0,0
+291,Corinthians,Coritiba,2,1,3.4,1.3,3,0,0
+292,Fluminense,Chapecoense,2,3,4.75,1.16,5,0,1
+293,Cruzeiro,São Paulo,2,1,4.0,1.2,3,0,0
+294,Figueirense,Atlético Mineiro,0,1,3.6,1.25,1,0,0
+295,Flamengo,Goiás,4,1,3.6,1.25,5,0,1
+296,Palmeiras,Vasco da Gama,0,2,3.0,1.38,2,0,0
+297,Joinville,Santos,0,0,3.4,1.28,0,0,0
+298,Sport Recife,Grêmio,1,0,4.0,1.22,1,0,0
+299,Cruzeiro,Sport Recife,3,0,3.2,1.33,3,0,0
+300,Goiás,Coritiba,1,3,3.75,1.22,4,0,1
+301,Athletico-PR,Palmeiras,3,3,3.5,1.25,6,0,1
+302,Avaí,Joinville,2,1,4.3,1.18,3,0,0
+303,Ponte Preta,Figueirense,0,1,4.0,1.22,1,0,0
+304,Chapecoense,Internacional,1,0,4.5,1.18,1,0,0
+305,Grêmio,Fluminense,1,0,3.75,1.25,1,0,0
+306,São Paulo,Atlético Mineiro,4,2,2.8,1.4,6,0,1
+307,Vasco da Gama,Corinthians,1,1,4.15,1.2,2,0,0
+308,Palmeiras,Cruzeiro,1,1,3.4,1.28,2,0,0
+309,Atlético Mineiro,Goiás,2,2,2.5,1.48,4,0,1
+310,Corinthians,São Paulo,6,1,3.5,1.25,7,0,1
+311,Figueirense,Chapecoense,0,0,4.3,1.2,0,0,0
+312,Internacional,Grêmio,1,0,4.3,1.18,1,0,0
+313,Flamengo,Ponte Preta,1,1,3.7,1.25,2,0,0
+314,Coritiba,Santos,1,0,3.5,1.25,1,0,0
+315,Fluminense,Avaí,3,1,4.3,1.2,4,0,1
+316,Sport Recife,Athletico-PR,0,0,3.3,1.3,0,0,0
+317,São Paulo,Figueirense,3,2,3.2,1.3,5,0,1
+318,Fluminense,Internacional,1,1,3.75,1.22,2,0,0
+319,Avaí,Ponte Preta,1,0,3.5,1.25,1,0,0
+320,Cruzeiro,Joinville,3,0,3.0,1.38,3,0,0
+321,Grêmio,Atlético Mineiro,2,1,3.4,1.3,3,0,0
+322,Sport Recife,Corinthians,2,0,3.2,1.3,2,0,0
+323,Chapecoense,Goiás,1,3,3.7,1.25,4,0,1
+324,Palmeiras,Coritiba,0,2,3.75,1.25,2,0,0
+325,Flamengo,Sport Recife,1,0,3.3,1.25,1,0,0
+326,Palmeiras,Athletico-PR,4,0,3.5,1.25,4,0,1
+327,Atlético Mineiro,Santos,1,0,3.5,1.25,1,0,0
+328,Coritiba,Cruzeiro,1,0,4.0,1.18,1,0,0
+329,Botafogo,São Paulo,0,1,4.0,1.2,1,0,0
+330,Santa Cruz,Vitória,4,1,3.5,1.22,5,0,1
+331,América-MG,Fluminense,0,1,3.5,1.25,1,0,0
+332,Corinthians,Grêmio,0,0,4.1,1.18,0,0,0
+333,Figueirense,Ponte Preta,0,0,4.0,1.18,0,0,0
+334,Internacional,Chapecoense,0,0,4.0,1.18,0,0,0
+335,Ponte Preta,Palmeiras,2,1,4.0,1.2,3,0,0
+336,Fluminense,Santa Cruz,2,2,3.3,1.25,4,0,1
+337,Cruzeiro,Figueirense,2,2,3.8,1.2,4,0,1
+338,Athletico-PR,Atlético Mineiro,1,1,3.5,1.22,2,0,0
+339,Santos,Coritiba,2,1,3.5,1.25,3,0,0
+340,Chapecoense,América-MG,3,1,4.0,1.2,4,0,1
+341,Grêmio,Flamengo,1,0,4.0,1.2,1,0,0
+342,São Paulo,Internacional,1,2,4.0,1.2,3,0,0
+343,Vitória,Corinthians,3,2,3.8,1.2,5,0,1
+344,Sport Recife,Botafogo,1,1,3.5,1.22,2,0,0
+345,Botafogo,Athletico-PR,2,1,3.9,1.2,3,0,0
+346,Figueirense,Santos,2,2,4.0,1.2,4,0,1
+347,América-MG,Vitória,1,1,3.0,1.3,2,0,0
+348,Flamengo,Chapecoense,2,2,4.0,1.2,4,0,1
+349,Flamengo,Chapecoense,2,2,4.0,1.2,4,0,1
+350,Palmeiras,Fluminense,2,0,3.3,1.28,2,0,0
+351,Santa Cruz,Cruzeiro,4,1,3.5,1.25,5,0,1
+352,Corinthians,Ponte Preta,3,0,3.1,1.3,3,0,0
+353,Internacional,Sport Recife,1,0,4.0,1.18,1,0,0
+354,Atlético Mineiro,Grêmio,0,3,3.8,1.2,3,0,0
+355,Cruzeiro,América-MG,1,1,3.2,1.28,2,0,0
+356,Athletico-PR,Figueirense,2,1,3.5,1.25,3,0,0
+357,Chapecoense,Santa Cruz,1,1,3.5,1.25,2,0,0
+358,Ponte Preta,Flamengo,1,2,3.6,1.22,3,0,0
+359,Sport Recife,Corinthians,0,2,4.0,1.2,2,0,0
+360,Fluminense,Botafogo,1,0,3.6,1.22,1,0,0
+361,São Paulo,Palmeiras,1,0,3.8,1.22,1,0,0
+362,Vitória,Atlético Mineiro,1,1,3.2,1.3,2,0,0
+363,Grêmio,Coritiba,2,0,3.8,1.22,2,0,0
+364,Santos,Internacional,0,1,3.9,1.2,1,0,0
+365,Internacional,Athletico-PR,1,0,3.5,1.22,1,0,0
+366,Corinthians,Santos,1,0,4.0,1.18,1,0,0
+367,Coritiba,Chapecoense,3,4,4.6,1.15,7,0,1
+368,Santa Cruz,Sport Recife,0,1,3.7,1.22,1,0,0
+369,Santa Cruz,Sport Recife,0,1,3.7,1.22,1,0,0
+370,Botafogo,Cruzeiro,0,1,3.6,1.22,1,0,0
+371,Figueirense,São Paulo,1,0,4.0,1.18,1,0,0
+372,América-MG,Ponte Preta,1,2,3.75,1.22,3,0,0
+373,Flamengo,Vitória,1,0,2.8,1.38,1,0,0
+374,Palmeiras,Grêmio,4,3,3.75,1.22,7,0,1
+375,Athletico-PR,Santa Cruz,1,0,3.0,1.3,1,0,0
+376,Chapecoense,Fluminense,0,0,4.0,1.2,0,0,0
+377,Corinthians,Coritiba,2,1,3.5,1.25,3,0,0
+378,América-MG,Figueirense,1,0,4.0,1.18,1,0,0
+379,Santos,Botafogo,3,0,4.0,1.2,3,0,0
+380,Flamengo,Palmeiras,1,2,3.5,1.25,3,0,0
+381,Grêmio,Ponte Preta,1,0,3.8,1.22,1,0,0
+382,Sport Recife,Atlético Mineiro,4,4,3.4,1.25,8,0,1
+383,Vitória,Internacional,1,0,4.0,1.18,1,0,0
+384,Cruzeiro,São Paulo,0,1,3.9,1.2,1,0,0
+385,Internacional,América-MG,3,1,3.5,1.22,4,0,1
+386,Ponte Preta,Chapecoense,2,1,3.8,1.2,3,0,0
+387,Fluminense,Grêmio,1,1,4.25,1.18,2,0,0
+388,São Paulo,Athletico-PR,1,2,3.4,1.25,3,0,0
+389,Botafogo,Vitória,1,1,3.5,1.25,2,0,0
+390,Coritiba,Sport Recife,3,2,3.9,1.2,5,0,1
+391,Atlético Mineiro,Cruzeiro,2,3,3.3,1.28,5,0,1
+392,Figueirense,Flamengo,1,0,3.9,1.2,1,0,0
+393,Santa Cruz,Santos,0,2,4.25,1.17,2,0,0
+394,Santos,Sport Recife,1,2,3.2,1.3,3,0,0
+395,Chapecoense,Grêmio,3,3,4.4,1.16,6,0,1
+396,Ponte Preta,Athletico-PR,3,2,3.8,1.22,5,0,1
+397,São Paulo,Vitória,2,0,3.0,1.33,2,0,0
+398,Botafogo,América-MG,3,1,3.5,1.25,4,0,1
+399,Santa Cruz,Figueirense,1,0,4.0,1.2,1,0,0
+400,Santos,Sport Recife,2,0,3.0,1.33,2,0,0
+401,Coritiba,Palmeiras,2,2,3.5,1.22,4,0,1
+402,Cruzeiro,Flamengo,0,1,3.5,1.22,1,0,0
+403,Internacional,Atlético Mineiro,2,0,3.2,1.3,2,0,0
+404,Fluminense,Corinthians,1,0,4.0,1.2,1,0,0
+405,Palmeiras,Santa Cruz,3,1,2.7,1.4,4,0,1
+406,Athletico-PR,Santos,1,0,3.5,1.25,1,0,0
+407,América-MG,Coritiba,2,1,3.75,1.22,3,0,0
+408,Atlético Mineiro,Ponte Preta,3,0,2.8,1.38,3,0,0
+409,Vitória,Chapecoense,1,2,3.5,1.25,3,0,0
+410,Corinthians,Botafogo,3,1,3.0,1.3,4,0,1
+411,Figueirense,Internacional,3,2,4.15,1.18,5,0,1
+412,Flamengo,São Paulo,2,2,3.8,1.2,4,0,1
+413,Sport Recife,Fluminense,2,1,3.8,1.2,3,0,0
+414,Grêmio,Cruzeiro,2,0,3.5,1.25,2,0,0
+415,Palmeiras,América-MG,2,0,2.35,1.5,2,0,0
+416,Chapecoense,Athletico-PR,0,0,4.25,1.18,0,0,0
+417,Chapecoense,Athletico-PR,0,0,4.25,1.18,0,0,0
+418,Botafogo,Figueirense,0,0,3.6,1.22,0,0,0
+419,Santa Cruz,Flamengo,0,1,3.5,1.25,1,0,0
+420,Atlético Mineiro,Corinthians,2,1,3.3,1.28,3,0,0
+421,Grêmio,Vitória,1,2,2.9,1.35,3,0,0
+422,São Paulo,Sport Recife,0,0,2.85,1.35,0,0,0
+423,Coritiba,Internacional,1,1,3.8,1.2,2,0,0
+424,Cruzeiro,Palmeiras,2,1,3.5,1.25,3,0,0
+425,Corinthians,Santa Cruz,2,1,2.8,1.38,3,0,0
+426,América-MG,Atlético Mineiro,0,1,2.9,1.33,1,0,0
+427,Athletico-PR,Grêmio,2,0,4.1,1.18,2,0,0
+428,Flamengo,Fluminense,1,2,3.8,1.22,3,0,0
+429,Internacional,Botafogo,2,3,3.2,1.28,5,0,1
+430,Santos,São Paulo,3,0,3.8,1.22,3,0,0
+431,Vitória,Ponte Preta,1,1,3.4,1.25,2,0,0
+432,Figueirense,Coritiba,0,0,4.0,1.18,0,0,0
+433,Sport Recife,Chapecoense,5,1,3.5,1.25,6,0,1
+434,Flamengo,Internacional,1,0,3.7,1.22,1,0,0
+435,Grêmio,Santos,3,2,3.5,1.22,5,0,1
+436,Vitória,Sport Recife,3,2,3.3,1.28,5,0,1
+437,Chapecoense,Cruzeiro,3,2,3.8,1.22,5,0,1
+438,Chapecoense,Cruzeiro,3,2,3.8,1.22,5,0,1
+439,América-MG,Corinthians,0,2,4.0,1.2,2,0,0
+440,São Paulo,Fluminense,2,1,4.0,1.2,3,0,0
+441,Palmeiras,Figueirense,4,0,2.75,1.4,4,0,1
+442,Santa Cruz,Ponte Preta,0,3,3.6,1.22,3,0,0
+443,Atlético Mineiro,Botafogo,5,3,2.55,1.45,8,0,1
+444,Fluminense,Coritiba,0,0,3.8,1.2,0,0,0
+445,Athletico-PR,América-MG,1,0,3.0,1.3,1,0,0
+446,Cruzeiro,Vitória,2,2,2.65,1.4,4,0,1
+447,Internacional,Grêmio,0,1,3.9,1.2,1,0,0
+448,Botafogo,Santa Cruz,2,1,3.0,1.33,3,0,0
+449,Corinthians,Flamengo,4,0,3.9,1.2,4,0,1
+450,Ponte Preta,São Paulo,1,0,4.0,1.2,1,0,0
+451,Santos,Chapecoense,3,0,2.65,1.42,3,0,0
+452,Figueirense,Atlético Mineiro,1,1,3.0,1.3,2,0,0
+453,Sport Recife,Palmeiras,1,3,2.85,1.35,4,0,1
+454,Chapecoense,Corinthians,0,2,3.8,1.2,2,0,0
+455,Coritiba,Botafogo,0,0,3.4,1.25,0,0,0
+456,Ponte Preta,Sport Recife,2,1,3.0,1.33,3,0,0
+457,Flamengo,Atlético Mineiro,2,0,3.0,1.3,2,0,0
+458,Grêmio,Figueirense,2,1,3.0,1.3,3,0,0
+459,Santa Cruz,Internacional,1,0,3.9,1.2,1,0,0
+460,São Paulo,América-MG,3,0,3.3,1.28,3,0,0
+461,Vitória,Fluminense,0,0,2.85,1.35,0,0,0
+462,Cruzeiro,Athletico-PR,0,3,3.0,1.33,3,0,0
+463,Palmeiras,Santos,1,1,2.9,1.33,2,0,0
+464,Botafogo,Flamengo,3,3,3.5,1.25,6,0,1
+465,Botafogo,Flamengo,3,3,3.5,1.25,6,0,1
+466,América-MG,Santa Cruz,0,3,4.0,1.2,3,0,0
+467,Athletico-PR,Vitória,1,1,3.0,1.33,2,0,0
+468,Corinthians,São Paulo,1,1,3.7,1.22,2,0,0
+469,Figueirense,Chapecoense,1,1,4.0,1.18,2,0,0
+470,Fluminense,Cruzeiro,2,0,3.7,1.22,2,0,0
+471,Internacional,Palmeiras,0,1,3.3,1.25,1,0,0
+472,Sport Recife,Grêmio,4,2,3.75,1.22,6,0,1
+473,Corinthians,Figueirense,1,1,3.0,1.33,2,0,0
+474,Santa Cruz,Coritiba,0,1,3.7,1.22,1,0,0
+475,Palmeiras,Atlético Mineiro,0,1,2.55,1.45,1,0,0
+476,Ponte Preta,Internacional,2,2,3.8,1.2,4,0,1
+477,Athletico-PR,Fluminense,1,0,4.0,1.2,1,0,0
+478,Chapecoense,Botafogo,2,1,3.5,1.25,3,0,0
+479,Cruzeiro,Sport Recife,1,2,2.45,1.45,3,0,0
+480,Grêmio,São Paulo,1,0,3.5,1.22,1,0,0
+481,Vitória,Santos,2,3,2.8,1.35,5,0,1
+482,Flamengo,América-MG,2,1,2.75,1.38,3,0,0
+483,Sport Recife,América-MG,1,1,3.2,1.33,2,0,0
+484,Vitória,Coritiba,3,1,3.8,1.25,4,0,1
+485,Athletico-PR,Corinthians,2,0,4.65,1.18,2,0,0
+486,Ponte Preta,Botafogo,2,0,3.35,1.3,2,0,0
+487,Grêmio,Santa Cruz,0,0,3.1,1.35,0,0,0
+488,São Paulo,Atlético Mineiro,1,2,3.2,1.32,3,0,0
+489,Cruzeiro,Internacional,4,2,3.55,1.27,6,0,1
+490,Chapecoense,Palmeiras,1,1,3.8,1.25,2,0,0
+491,Flamengo,Athletico-PR,1,0,3.9,1.24,1,0,0
+492,Coritiba,Ponte Preta,3,1,4.15,1.22,4,0,1
+493,Palmeiras,Vitória,2,1,2.5,1.5,3,0,0
+494,Internacional,Fluminense,2,2,4.25,1.21,4,0,1
+495,Santa Cruz,São Paulo,1,2,4.0,1.23,3,0,0
+496,Figueirense,Sport Recife,1,1,4.15,1.22,2,0,0
+497,Atlético Mineiro,Chapecoense,3,1,3.0,1.38,4,0,1
+498,Corinthians,Cruzeiro,1,1,3.35,1.3,2,0,0
+499,Sport Recife,Flamengo,1,0,3.3,1.25,1,0,0
+500,Ponte Preta,Figueirense,2,0,3.5,1.25,2,0,0
+501,Fluminense,América-MG,1,0,3.35,1.3,1,0,0
+502,Grêmio,Corinthians,3,0,4.65,1.18,3,0,0
+503,Cruzeiro,Coritiba,2,2,3.35,1.3,4,0,1
+504,São Paulo,Botafogo,0,1,3.2,1.32,1,0,0
+505,Athletico-PR,Palmeiras,0,1,4.0,1.23,1,0,0
+506,Chapecoense,Internacional,1,0,4.8,1.18,1,0,0
+507,América-MG,Chapecoense,1,2,4.4,1.2,3,0,0
+508,Atlético Mineiro,Athletico-PR,1,0,2.85,1.42,1,0,0
+509,Flamengo,Grêmio,2,1,4.0,1.23,3,0,0
+510,Internacional,São Paulo,1,1,4.25,1.21,2,0,0
+511,Palmeiras,Ponte Preta,2,2,3.2,1.32,4,0,1
+512,Santa Cruz,Fluminense,0,1,4.0,1.23,1,0,0
+513,Figueirense,Cruzeiro,1,2,3.9,1.24,3,0,0
+514,Corinthians,Vitória,2,1,2.67,1.45,3,0,0
+515,Ponte Preta,Corinthians,2,0,4.4,1.2,2,0,0
+516,Cruzeiro,Santa Cruz,2,0,2.75,1.43,2,0,0
+517,Cruzeiro,Santa Cruz,2,0,2.75,1.43,2,0,0
+518,Chapecoense,Flamengo,1,3,4.4,1.2,4,0,1
+519,Fluminense,Palmeiras,0,2,3.55,1.27,2,0,0
+520,Grêmio,Atlético Mineiro,1,1,3.1,1.35,2,0,0
+521,São Paulo,Coritiba,0,0,3.7,1.26,0,0,0
+522,Sport Recife,Internacional,1,1,4.15,1.22,2,0,0
+523,Vitória,América-MG,2,1,3.2,1.32,3,0,0
+524,Athletico-PR,Botafogo,1,0,4.1,1.23,1,0,0
+525,Fluminense,Figueirense,3,2,3.55,1.27,5,0,1
+526,Botafogo,Grêmio,2,1,3.55,1.3,3,0,0
+527,Botafogo,Fluminense,1,0,4.25,1.21,1,0,0
+528,Figueirense,Athletico-PR,1,0,4.8,1.18,1,0,0
+529,Santa Cruz,Chapecoense,2,2,4.0,1.23,4,0,1
+530,Atlético Mineiro,Vitória,2,1,2.42,1.52,3,0,0
+531,Atlético Mineiro,Vitória,2,1,2.42,1.52,3,0,0
+532,Flamengo,Ponte Preta,2,1,3.35,1.3,3,0,0
+533,Palmeiras,São Paulo,2,1,3.55,1.27,3,0,0
+534,Corinthians,Sport Recife,3,0,3.2,1.33,3,0,0
+535,América-MG,Cruzeiro,0,2,3.35,1.3,2,0,0
+536,Internacional,Santos,2,1,4.1,1.23,3,0,0
+537,Vitória,Flamengo,1,2,3.1,1.35,3,0,0
+538,Chapecoense,Coritiba,1,0,4.0,1.23,1,0,0
+539,São Paulo,Figueirense,3,1,3.2,1.32,4,0,1
+540,Athletico-PR,Internacional,2,1,5.0,1.17,3,0,0
+541,Cruzeiro,Botafogo,0,2,2.6,1.48,2,0,0
+542,Santos,Corinthians,2,1,4.15,1.22,3,0,0
+543,Sport Recife,Santa Cruz,5,3,3.8,1.25,8,0,1
+544,Grêmio,Palmeiras,0,0,3.2,1.33,0,0,0
+545,Ponte Preta,América-MG,1,1,3.55,1.27,2,0,0
+546,Fluminense,Atlético Mineiro,4,2,2.85,1.4,6,0,1
+547,Botafogo,Santos,0,1,3.2,1.33,1,0,0
+548,Figueirense,América-MG,2,2,5.0,1.17,4,0,1
+549,Ponte Preta,Grêmio,3,0,4.5,1.19,3,0,0
+550,Santa Cruz,Athletico-PR,1,0,4.25,1.21,1,0,0
+551,Coritiba,Corinthians,1,1,4.4,1.2,2,0,0
+552,Palmeiras,Flamengo,1,1,3.35,1.3,2,0,0
+553,Atlético Mineiro,Sport Recife,1,0,2.42,1.52,1,0,0
+554,Fluminense,Chapecoense,1,2,3.7,1.26,3,0,0
+555,Internacional,Vitória,0,1,3.1,1.35,1,0,0
+556,São Paulo,Cruzeiro,1,0,3.8,1.25,1,0,0
+557,Corinthians,Palmeiras,0,2,4.15,1.22,2,0,0
+558,Flamengo,Figueirense,2,0,2.85,1.4,2,0,0
+559,Athletico-PR,São Paulo,1,0,5.0,1.17,1,0,0
+560,Chapecoense,Ponte Preta,2,2,4.1,1.23,4,0,1
+561,Cruzeiro,Atlético Mineiro,1,1,3.2,1.33,2,0,0
+562,Grêmio,Fluminense,0,1,3.9,1.24,1,0,0
+563,Sport Recife,Coritiba,0,1,3.7,1.26,1,0,0
+564,Santos,Santa Cruz,3,2,2.85,1.4,5,0,1
+565,Vitória,Botafogo,0,1,3.1,1.35,1,0,0
+566,América-MG,Internacional,1,0,4.15,1.22,1,0,0
+567,Palmeiras,Coritiba,2,1,3.1,1.35,3,0,0
+568,Sport Recife,Santos,1,0,3.7,1.26,1,0,0
+569,América-MG,Botafogo,1,0,3.8,1.25,1,0,0
+570,Athletico-PR,Ponte Preta,3,0,5.25,1.16,3,0,0
+571,Figueirense,Santa Cruz,3,1,4.25,1.21,4,0,1
+572,Flamengo,Cruzeiro,2,1,3.2,1.33,3,0,0
+573,Grêmio,Chapecoense,1,0,3.8,1.25,1,0,0
+574,Vitória,São Paulo,2,0,3.7,1.26,2,0,0
+575,Atlético Mineiro,Internacional,3,1,3.2,1.32,4,0,1
+576,Fluminense,Sport Recife,3,1,3.7,1.26,4,0,1
+577,Chapecoense,Vitória,1,4,3.55,1.27,5,0,1
+578,Santos,Athletico-PR,2,0,3.9,1.24,2,0,0
+579,São Paulo,Flamengo,0,0,3.55,1.27,0,0,0
+580,São Paulo,Flamengo,0,0,3.55,1.27,0,0,0
+581,Ponte Preta,Atlético Mineiro,1,2,3.2,1.33,3,0,0
+582,Cruzeiro,Grêmio,1,0,3.55,1.27,1,0,0
+583,Internacional,Figueirense,1,0,3.55,1.27,1,0,0
+584,Santa Cruz,Palmeiras,2,3,3.55,1.28,5,0,1
+585,Coritiba,América-MG,3,0,3.55,1.27,3,0,0
+586,Athletico-PR,Chapecoense,3,1,5.5,1.16,4,0,1
+587,Vitória,Grêmio,0,1,3.8,1.25,1,0,0
+588,Corinthians,Atlético Mineiro,0,0,3.2,1.33,0,0,0
+589,Santos,Fluminense,2,1,3.7,1.26,3,0,0
+590,Sport Recife,São Paulo,1,1,4.25,1.21,2,0,0
+591,Internacional,Coritiba,1,0,5.0,1.17,1,0,0
+592,Cruzeiro,Ponte Preta,2,0,3.1,1.35,2,0,0
+593,América-MG,Palmeiras,0,2,3.1,1.35,2,0,0
+594,Figueirense,Botafogo,0,1,4.5,1.2,1,0,0
+595,Flamengo,Santa Cruz,3,0,2.42,1.52,3,0,0
+596,Chapecoense,Sport Recife,3,0,3.7,1.26,3,0,0
+597,Coritiba,Figueirense,0,0,3.8,1.25,0,0,0
+598,Botafogo,Internacional,1,0,4.5,1.2,1,0,0
+599,Santa Cruz,Corinthians,2,4,3.35,1.3,6,0,1
+600,Atlético Mineiro,América-MG,3,0,2.6,1.48,3,0,0
+601,Palmeiras,Cruzeiro,0,0,3.1,1.35,0,0,0
+602,Ponte Preta,Vitória,2,0,3.1,1.35,2,0,0
+603,Fluminense,Flamengo,1,2,3.8,1.25,3,0,0
+604,Grêmio,Athletico-PR,1,0,4.65,1.18,1,0,0
+605,São Paulo,Santos,0,1,4.15,1.22,1,0,0
+606,Athletico-PR,Coritiba,2,0,5.75,1.15,2,0,0
+607,Botafogo,Atlético Mineiro,3,2,3.7,1.26,5,0,1
+608,Cruzeiro,Chapecoense,0,0,3.2,1.32,0,0,0
+609,Figueirense,Palmeiras,1,2,3.7,1.26,3,0,0
+610,Internacional,Flamengo,2,1,5.0,1.17,3,0,0
+611,Corinthians,América-MG,2,0,2.85,1.4,2,0,0
+612,Ponte Preta,Santa Cruz,3,0,3.2,1.33,3,0,0
+613,Santos,Grêmio,1,1,3.8,1.25,2,0,0
+614,Sport Recife,Vitória,1,0,3.0,1.38,1,0,0
+615,Fluminense,São Paulo,1,2,3.9,1.24,3,0,0
+616,Santa Cruz,Botafogo,0,1,3.2,1.33,1,0,0
+617,São Paulo,Ponte Preta,2,0,4.0,1.23,2,0,0
+618,Flamengo,Corinthians,2,2,3.55,1.28,4,0,1
+619,Grêmio,Internacional,0,0,5.5,1.15,0,0,0
+620,Palmeiras,Sport Recife,2,1,2.75,1.43,3,0,0
+621,Vitória,Cruzeiro,0,1,3.55,1.28,1,0,0
+622,Coritiba,Fluminense,1,1,4.25,1.21,2,0,0
+623,Atlético Mineiro,Figueirense,3,0,2.75,1.43,3,0,0
+624,Chapecoense,Santos,0,1,3.9,1.24,1,0,0
+625,América-MG,Athletico-PR,1,0,5.5,1.16,1,0,0
+626,Sport Recife,Ponte Preta,1,0,3.8,1.25,1,0,0
+627,Fluminense,Vitória,2,2,2.75,1.43,4,0,1
+628,Athletico-PR,Cruzeiro,1,0,5.0,1.17,1,0,0
+629,Atlético Mineiro,Flamengo,2,2,2.85,1.4,4,0,1
+630,Corinthians,Chapecoense,1,1,3.55,1.28,2,0,0
+631,Botafogo,Coritiba,0,0,4.0,1.23,0,0,0
+632,Internacional,Santa Cruz,1,1,3.2,1.32,2,0,0
+633,Figueirense,Grêmio,0,0,4.5,1.2,0,0,0
+634,Santos,Palmeiras,1,0,3.35,1.3,1,0,0
+635,América-MG,São Paulo,1,0,4.5,1.2,1,0,0
+636,Flamengo,Botafogo,0,0,3.55,1.28,0,0,0
+637,São Paulo,Corinthians,4,0,4.25,1.21,4,0,1
+638,São Paulo,Corinthians,4,0,4.25,1.21,4,0,1
+639,Cruzeiro,Fluminense,4,2,3.7,1.26,6,0,1
+640,Palmeiras,Internacional,1,0,4.0,1.23,1,0,0
+641,Santa Cruz,América-MG,1,0,3.35,1.3,1,0,0
+642,Vitória,Athletico-PR,3,2,3.9,1.24,5,0,1
+643,Chapecoense,Figueirense,1,0,4.65,1.18,1,0,0
+644,Coritiba,Atlético Mineiro,2,0,3.2,1.32,2,0,0
+645,Grêmio,Sport Recife,0,3,4.15,1.22,3,0,0
+646,Fluminense,Athletico-PR,1,1,3.55,1.27,2,0,0
+647,Botafogo,Chapecoense,0,2,4.0,1.23,2,0,0
+648,Coritiba,Santa Cruz,1,0,3.0,1.38,1,0,0
+649,América-MG,Flamengo,0,1,3.2,1.33,1,0,0
+650,Figueirense,Corinthians,1,1,4.1,1.23,2,0,0
+651,Sport Recife,Cruzeiro,0,1,3.9,1.25,1,0,0
+652,Santos,Vitória,3,2,2.42,1.52,5,0,1
+653,São Paulo,Grêmio,1,1,4.65,1.18,2,0,0
+654,Atlético Mineiro,Palmeiras,1,1,3.1,1.35,2,0,0
+655,Internacional,Ponte Preta,1,1,4.15,1.22,2,0,0
+656,Athletico-PR,Sport Recife,2,0,4.25,1.21,2,0,0
+657,Cruzeiro,Santos,2,2,3.1,1.35,4,0,1
+658,Grêmio,América-MG,3,0,3.55,1.3,3,0,0
+659,Palmeiras,Botafogo,1,0,3.2,1.33,1,0,0
+660,Ponte Preta,Fluminense,1,0,3.2,1.33,1,0,0
+661,Vitória,Figueirense,4,0,3.0,1.38,4,0,1
+662,Chapecoense,São Paulo,2,0,4.65,1.18,2,0,0
+663,Flamengo,Coritiba,2,2,3.1,1.35,4,0,1
+664,Santa Cruz,Atlético Mineiro,3,3,2.67,1.45,6,0,1
+665,Corinthians,Internacional,1,0,4.8,1.18,1,0,0
+666,América-MG,Sport Recife,2,2,3.9,1.24,4,0,1
+667,Botafogo,Ponte Preta,1,1,3.7,1.26,2,0,0
+668,Corinthians,Athletico-PR,0,0,4.1,1.23,0,0,0
+669,Atlético Mineiro,São Paulo,1,2,3.0,1.38,3,0,0
+670,Flamengo,Santos,2,0,3.1,1.35,2,0,0
+671,Internacional,Cruzeiro,1,0,4.0,1.23,1,0,0
+672,Palmeiras,Chapecoense,1,0,3.2,1.33,1,0,0
+673,Figueirense,Fluminense,1,0,3.8,1.25,1,0,0
+674,Santa Cruz,Grêmio,5,1,3.2,1.33,6,0,1
