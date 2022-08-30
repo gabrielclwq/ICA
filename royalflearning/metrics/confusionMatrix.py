@@ -32,8 +32,8 @@ def confusionMatrix(Y_test, pred):
                         nPrev += 1
             matrizConf[i,j] = nPrev
 
-    dfMatrizConf = pd.DataFrame(matrizConf, columns=y_set())
-    dfMatrizConf.index = y_set()
+    dfMatrizConf = pd.DataFrame(matrizConf, columns=y_set)
+    dfMatrizConf.index = y_set
 
     return dfMatrizConf
 
@@ -45,7 +45,6 @@ def matrizSuporte(matrizConf):
             matrizConf (pd.DataFrame): confusion matrix.
         Return:
             matrizSup (np.array): support matrix.
-            supportName (list): list of statistics analyses names computed.
             
     """
 
